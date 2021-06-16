@@ -33,6 +33,14 @@ module.exports = {
 		"semi": [
 			"error",
 			"always"
+		],
+		"space-in-parens": [
+			"error",
+			"always"
+		],
+		"eol-last": [
+			"error",
+			"always"
 		]
 	}
 };
