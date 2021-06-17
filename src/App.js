@@ -20,6 +20,13 @@ function App( ) {
 		},
 		typography: {
 			fontFamily: "\"Raleway\", sans-serif"
+		},
+		overrides: {
+			MuiLink: {
+				underlineHover: {
+					textDecoration: "underline solid transparent" // To allow for smooth link hovering.
+				}
+			}
 		}
 	} );
 

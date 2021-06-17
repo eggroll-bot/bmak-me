@@ -1,1 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,900&display=swap');
+
+a {
+	text-decoration: underline solid transparent;
+	transition: text-decoration 0.3s ease;
+}
+
+a:hover {
+	text-decoration: underline solid currentcolor;
+}
