@@ -41,17 +41,15 @@ function App() {
 					</Typography>
 				</Box>
 
-				<Box mb={3}>
-					<Grid container align="center" justify="center" spacing={5}>
-						<Grid item>
-							<Button color="primary" size="medium" startIcon={<InfoIcon />} variant="outlined">About Me</Button>
-						</Grid>
-
-						<Grid item>
-							<Button color="primary" size="medium" startIcon={<CodeIcon />} variant="outlined">Portfolio</Button>
-						</Grid>
+				<Grid container align="center" justify="center" spacing={5}>
+					<Grid item>
+						<Button color="primary" size="medium" startIcon={<InfoIcon />} variant="outlined">About Me</Button>
 					</Grid>
-				</Box>
+
+					<Grid item>
+						<Button color="primary" size="medium" startIcon={<CodeIcon />} variant="outlined">Portfolio</Button>
+					</Grid>
+				</Grid>
 			</MuiThemeProvider>
 		</div>
 	);
