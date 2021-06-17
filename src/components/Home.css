@@ -6,3 +6,12 @@
 	height: 100vh;
 	overflow-x: hidden;
 }
+
+.Avatar {
+    border: 2px solid grey;
+    transition: transform 0.3s;
+}
+
+.Avatar:hover {
+    transform: scale3d( 1.1, 1.1, 1 );
+}

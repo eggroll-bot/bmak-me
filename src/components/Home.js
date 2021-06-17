@@ -5,13 +5,16 @@ import pfpImage from "../images/pfp.png";
 import { Code as CodeIcon, GitHub as GitHubIcon, Info as InfoIcon, LinkedIn as LinkedInIcon } from "@material-ui/icons";
 import { useHistory } from "react-router-dom";
 
+const gitHubLink = "https://github.com/eggroll-bot";
+const linkedInLink = "https://www.linkedin.com/in/brian-mak/";
+
 function Home( ) {
 	const history = useHistory( );
 
 	return (
 		<div className="Home">
 			<Box mb={3}>
-				<Avatar alt="Eggroll Profile Picture" src={pfpImage} style={ { height: "100px", width: "100px" } }></Avatar>
+				<Avatar alt="Eggroll Profile Picture" className="Avatar" src={pfpImage} style={ { height: "100px", width: "100px" } }></Avatar>
 			</Box>
 
 			<Box mb={3}>
@@ -19,9 +22,9 @@ function Home( ) {
 
 				<Typography align="center" gutterBottom={true} variant="h4">
 					Here is my&nbsp;
-					<Link href="https://github.com/eggroll-bot" rel="noopener noreferrer" style={{color: "#FF845B"}} target="_blank"><GitHubIcon /> GitHub</Link>
+					<Link href={gitHubLink} rel="noopener noreferrer" style={{color: "#FF845B"}} target="_blank"><GitHubIcon /> GitHub</Link>
 					&nbsp;and&nbsp;
-					<Link color="secondary" href="https://www.linkedin.com/in/brian-mak/" rel="noopener noreferrer" target="_blank"><LinkedInIcon /> LinkedIn</Link>
+					<Link color="secondary" href={linkedInLink} rel="noopener noreferrer" target="_blank"><LinkedInIcon /> LinkedIn</Link>
 					.
 				</Typography>
 			</Box>
