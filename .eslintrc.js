@@ -54,6 +54,30 @@ module.exports = {
 			"error",
 			"always"
 		],
+		"react/jsx-equals-spacing": [
+			"error",
+			"never"
+		],
+		"react/jsx-sort-props": [
+			"error",
+			{
+				"ignoreCase": true,
+				"shorthandFirst": true
+			}
+		],
+		"react/jsx-sort-default-props": [
+			"error",
+			{
+				"ignoreCase": true
+			}
+		],
+		"react/sort-prop-types": [
+			"error",
+			{
+				"ignoreCase": true,
+				"sortShapeProp": true
+			}
+		],
 		"eol-last": [
 			"error",
 			"always"
