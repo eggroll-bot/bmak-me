@@ -34,6 +34,12 @@ module.exports = {
 			"error",
 			"always"
 		],
+		"no-floating-decimal": [
+			"error"
+		],
+		"no-trailing-spaces": [
+			"error"
+		],
 		"space-in-parens": [
 			"error",
 			"always"
@@ -57,6 +63,43 @@ module.exports = {
 		"react/jsx-equals-spacing": [
 			"error",
 			"never"
+		],
+		"padding-line-between-statements": [
+			"error",
+			{
+				"blankLine": "always",
+				"prev": "*",
+				"next": "*"
+			},
+			{
+				"blankLine": "any",
+				"prev": [ "const", "let", "var", "expression" ],
+				"next": [ "const", "let", "var", "expression" ]
+			},
+			{
+				"blankLine": "any",
+				"prev": "import",
+				"next": "import"
+			}
+		],
+		"react/jsx-curly-newline": [
+			"error",
+			{
+				"multiline": "consistent",
+				"singleline": "consistent"
+			}
+		],
+		"react/jsx-wrap-multilines": [
+			"error",
+			{
+				"declaration": "parens",
+				"assignment": "parens",
+				"return": "parens-new-line",
+				"arrow": "parens",
+				"condition": "ignore",
+				"logical": "ignore",
+				"prop": "ignore"
+			}
 		],
 		"react/jsx-sort-props": [
 			"error",
