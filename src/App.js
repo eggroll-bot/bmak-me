@@ -33,7 +33,7 @@ function App( ) {
 	return (
 		<div className="App">
 			<HashRouter>
-				<MuiThemeProvider theme={theme}>
+				<MuiThemeProvider theme={ theme }>
 					<CssBaseline />
 					<Switch>
 						<Route path="/about-me">

@@ -38,6 +38,22 @@ module.exports = {
 			"error",
 			"always"
 		],
+		"template-curly-spacing": [
+			"error",
+			"always"
+		],
+		"object-curly-spacing": [
+			"error",
+			"always"
+		],
+		"array-bracket-spacing": [
+			"error",
+			"always"
+		],
+		"react/jsx-curly-spacing": [
+			"error",
+			"always"
+		],
 		"eol-last": [
 			"error",
 			"always"
