@@ -9,6 +9,7 @@ const gitHubLink = "https://github.com/eggroll-bot";
 const linkedInLink = "https://www.linkedin.com/in/brian-mak/";
 
 function Home( ) {
+	document.title = "Brian Mak";
 	const history = useHistory( );
 
 	return (
