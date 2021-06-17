@@ -1,8 +1,11 @@
 import React from "react";
 import "./App.css";
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { CssBaseline } from "@material-ui/core";
-import Home from "./components/Home.js";
+import Home from "./components/Home";
+import AboutMe from "./components/AboutMe";
+import Portfolio from "./components/Portfolio";
 
 function App( ) {
 	const theme = createMuiTheme( {
@@ -22,10 +25,24 @@ function App( ) {
 
 	return (
 		<div className="App">
-			<MuiThemeProvider theme={theme}>
-				<CssBaseline />
-				<Home />
-			</MuiThemeProvider>
+			<Router>
+				<MuiThemeProvider theme={theme}>
+					<CssBaseline />
+					<Switch>
+						<Route path="/about-me">
+							<AboutMe />
+						</Route>
+
+						<Route path="/portfolio">
+							<Portfolio />
+						</Route>
+
+						<Route path="/">
+							<Home />
+						</Route>
+					</Switch>
+				</MuiThemeProvider>
+			</Router>
 		</div>
 	);
 }
