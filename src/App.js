@@ -35,6 +35,7 @@ function App( ) {
 			<HashRouter>
 				<MuiThemeProvider theme={ theme }>
 					<CssBaseline />
+
 					<Switch>
 						<Route path="/about-me">
 							<AboutMe />
