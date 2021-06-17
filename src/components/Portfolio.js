@@ -1,8 +1,10 @@
 import React from "react";
+import HomeButton from "./HomeButton";
 
 function Portfolio( ) {
 	return (
-		<div className="Portfolio">
+		<div className="AboutMe">
+			<HomeButton />
 		</div>
 	);
 }
