@@ -1,7 +1,8 @@
 import React from "react";
 import "./App.css";
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
-import { Box, Button, CssBaseline, Grid, Link, Typography } from "@material-ui/core";
+import { Avatar, Box, Button, CssBaseline, Grid, Link, Typography } from "@material-ui/core";
+import pfpImage from "./images/pfp.png";
 import { Code as CodeIcon, GitHub as GitHubIcon, Info as InfoIcon, LinkedIn as LinkedInIcon } from "@material-ui/icons";
 
 function App() {
@@ -28,6 +29,10 @@ function App() {
 		<div className="App">
 			<MuiThemeProvider theme={theme}>
 				<CssBaseline />
+
+				<Box mb={3}>
+					<Avatar alt="Eggroll Profile Picture" src={pfpImage} style={{ height: "100px", width: "100px" }}></Avatar>
+				</Box>
 
 				<Box mb={3}>
 					<Typography align="center" fontWeight="fontWeightLight" gutterBottom={true} variant="h2">👋 Hey, I&apos;m Brian.</Typography>
