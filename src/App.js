@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import { CssBaseline } from "@material-ui/core";
 import Home from "./components/Home";
 import AboutMe from "./components/AboutMe";
@@ -32,7 +32,7 @@ function App( ) {
 
 	return (
 		<div className="App">
-			<Router>
+			<HashRouter>
 				<MuiThemeProvider theme={theme}>
 					<CssBaseline />
 					<Switch>
@@ -49,7 +49,7 @@ function App( ) {
 						</Route>
 					</Switch>
 				</MuiThemeProvider>
-			</Router>
+			</HashRouter>
 		</div>
 	);
 }
