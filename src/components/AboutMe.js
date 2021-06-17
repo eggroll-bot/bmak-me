@@ -2,7 +2,7 @@ import React from "react";
 import HomeButton from "./HomeButton";
 
 function AboutMe( ) {
-	document.title = "About Me";
+	document.title = "Brian Mak - About Me";
 
 	return (
 		<div className="AboutMe">
