@@ -3,7 +3,7 @@ import HomeButton from "./HomeButton";
 
 function Portfolio( ) {
 	return (
-		<div className="AboutMe">
+		<div className="Portfolio">
 			<HomeButton />
 		</div>
 	);
