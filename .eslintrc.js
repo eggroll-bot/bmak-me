@@ -64,6 +64,15 @@ module.exports = {
 			"error",
 			"never"
 		],
+		"react/jsx-tag-spacing": [
+			"error",
+			{
+				"closingSlash": "never",
+				"beforeSelfClosing": "always",
+				"afterOpening": "never",
+				"beforeClosing": "never"
+			}
+		],
 		"padding-line-between-statements": [
 			"error",
 			{
