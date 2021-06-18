@@ -6,9 +6,9 @@ import PropTypes from "prop-types";
 
 function HomeButton( props ) {
 	return (
-		<div className="HomeButton" style={ { padding: props.padding } }>
+		<div className="HomeButton" style={ { height: props.height + props.padding * 2 || 105, width: props.width + props.padding * 2 || 105, padding: props.padding } }>
 			<Link to="/">
-				<Avatar alt="Home Button" className="Avatar" src={ pfpImage } style={ { position: "absolute", height: props.height || 75, width: props.width || 75 } }></Avatar>
+				<Avatar alt="Home Button" className="Avatar" src={ pfpImage } style={ { height: props.height || 75, width: props.width || 75 } }></Avatar>
 			</Link>
 		</div>
 	);
