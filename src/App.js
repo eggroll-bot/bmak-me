@@ -10,7 +10,7 @@ import Portfolio from "./components/Portfolio";
 
 function fade( value ) {
 	return spring( value, {
-		stiffness: 300,
+		stiffness: 275,
 		damping: 25,
 	} );
 }
