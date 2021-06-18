@@ -1,12 +1,12 @@
 import React from "react";
-import HomeButton from "./HomeButton";
+import NavBar from "./NavBar";
 
 function AboutMe( ) {
-	document.title = "Brian Mak - About Me";
+	document.title = "About Me";
 
 	return (
 		<div className="AboutMe">
-			<HomeButton />
+			<NavBar />
 		</div>
 	);
 }
