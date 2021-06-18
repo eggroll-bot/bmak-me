@@ -15,11 +15,11 @@ function Home( ) {
 	return (
 		<div className="Home">
 			<Box mb={ 3 }>
-				<Avatar alt="Eggroll Profile Picture" className="Avatar" src={ pfpImage } style={ { height: "100px", width: "100px" } }></Avatar>
+				<Avatar alt="Eggroll Profile Picture" className="Avatar" src={ pfpImage }></Avatar>
 			</Box>
 
 			<Box mb={ 3 }>
-				<Typography align="center" fontWeight="fontWeightLight" gutterBottom={ true } style={ { fontWeight: 800 } } variant="h2">👋 Hey, I&apos;m Brian.</Typography>
+				<Typography align="center" gutterBottom={ true } style={ { fontWeight: 800 } } variant="h2">👋 Hey, I&apos;m Brian.</Typography>
 
 				<Typography align="center" gutterBottom={ true } variant="h4">
 					Here is my&nbsp;

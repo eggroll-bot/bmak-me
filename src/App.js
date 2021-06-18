@@ -30,6 +30,12 @@ function App( ) {
 			fontFamily: "\"Raleway\", sans-serif"
 		},
 		overrides: {
+			MuiAvatar: {
+				root: {
+					height: "100px",
+					width: "100px"
+				}
+			},
 			MuiLink: {
 				underlineHover: {
 					textDecoration: "underline solid transparent" // To allow for smooth link hovering.
