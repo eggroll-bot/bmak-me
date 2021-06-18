@@ -18,13 +18,17 @@ function fade( value ) {
 function App( ) {
 	const theme = createMuiTheme( {
 		palette: {
-			type: "dark",
+			background: {
+				default: "#1C1C1C",
+				paper: "#2E2E2E"
+			},
 			primary: {
 				main: "#FFF640"
 			},
 			secondary: {
 				main: "#FF9B48"
-			}
+			},
+			type: "dark"
 		},
 		typography: {
 			fontFamily: "\"Raleway\", sans-serif"
