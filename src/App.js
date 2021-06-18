@@ -19,8 +19,8 @@ function App( ) {
 	const theme = createMuiTheme( {
 		palette: {
 			background: {
-				default: "#1C1C1C",
-				paper: "#2E2E2E"
+				default: "#242424",
+				paper: "#333333"
 			},
 			primary: {
 				main: "#FFF640"
