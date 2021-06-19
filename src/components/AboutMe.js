@@ -14,13 +14,13 @@ function AboutMe( ) {
 	`;
 
 	return (
-		<div className="AboutMe">
+		<>
 			<InnerPage title="👋 About Me">
 				<Typography align="left" paragraph={ true } style={ { fontSize: 22, fontWeight: 400 } }>{paragraphOne}</Typography>
 				<Typography align="left" paragraph={ true } style={ { fontSize: 22, fontWeight: 400 } }>{paragraphTwo}</Typography>
 				<Typography align="left" paragraph={ true } style={ { fontSize: 22, fontWeight: 400 } }>Feel free to check out what I&apos;ve been up to recently. My portfolio is linked <Link to="/portfolio">here</Link>.</Typography>
 			</InnerPage>
-		</div>
+		</>
 	);
 }
 

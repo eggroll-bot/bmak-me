@@ -6,7 +6,7 @@ function InnerPage( props ) {
 	document.title = props.title;
 
 	return (
-		<div className="InnerPage">
+		<>
 			<div style={ { margin: "auto", maxWidth: "1200px" } }>
 				<NavBar />
 
@@ -14,7 +14,7 @@ function InnerPage( props ) {
 					{ props.children }
 				</div>
 			</div>
-		</div>
+		</>
 	);
 }
 

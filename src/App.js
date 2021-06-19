@@ -61,7 +61,7 @@ function App( ) {
 	};
 
 	return (
-		<div className="App">
+		<>
 			<HashRouter>
 				<MuiThemeProvider theme={ theme }>
 					<CssBaseline />
@@ -80,7 +80,7 @@ function App( ) {
 					</AnimatedSwitch>
 				</MuiThemeProvider>
 			</HashRouter>
-		</div>
+		</>
 	);
 }
 
