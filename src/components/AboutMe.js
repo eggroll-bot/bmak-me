@@ -5,7 +5,7 @@ import { Typography } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles( {
-	text: {
+	bodyText: {
 		fontSize: 22,
 		fontWeight: 400
 	}
@@ -27,15 +27,15 @@ function AboutMe( ) {
 	return (
 		<>
 			<InnerPage title="👋 About Me">
-				<Typography align="left" className={ classes.text } paragraph={ true }>
+				<Typography align="left" className={ classes.bodyText } paragraph={ true }>
 					{paragraphOne}
 				</Typography>
 
-				<Typography align="left" className={ classes.text } paragraph={ true }>
+				<Typography align="left" className={ classes.bodyText } paragraph={ true }>
 					{paragraphTwo}
 				</Typography>
 
-				<Typography align="left" className={ classes.text } paragraph={ true }>
+				<Typography align="left" className={ classes.bodyText } paragraph={ true }>
 					Feel free to check out what I&apos;ve been up to recently. My portfolio is linked <Link to="/portfolio">here</Link>.
 				</Typography>
 			</InnerPage>
