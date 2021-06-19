@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap");
 
 a {
+	color: #FF9B48;
 	text-decoration: underline solid transparent;
 	transition: text-decoration 0.3s ease;
 }
