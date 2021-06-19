@@ -15,39 +15,39 @@ function fade( value ) {
 	} );
 }
 
-function App( ) {
-	const theme = createMuiTheme( {
-		palette: {
-			background: {
-				default: "#242424",
-				paper: "#333333"
-			},
-			primary: {
-				main: "#FFF640"
-			},
-			secondary: {
-				main: "#FF9B48"
-			},
-			type: "dark"
+const theme = createMuiTheme( {
+	palette: {
+		background: {
+			default: "#242424",
+			paper: "#333333"
 		},
-		typography: {
-			fontFamily: "\"Raleway\", sans-serif"
+		primary: {
+			main: "#FFF640"
 		},
-		overrides: {
-			MuiAvatar: {
-				root: {
-					height: "100px",
-					width: "100px"
-				}
-			},
-			MuiLink: {
-				underlineHover: {
-					textDecoration: "underline solid transparent" // To allow for smooth link hovering.
-				}
+		secondary: {
+			main: "#FF9B48"
+		},
+		type: "dark"
+	},
+	typography: {
+		fontFamily: "\"Raleway\", sans-serif"
+	},
+	overrides: {
+		MuiAvatar: {
+			root: {
+				height: "100px",
+				width: "100px"
+			}
+		},
+		MuiLink: {
+			underlineHover: {
+				textDecoration: "underline solid transparent" // To allow for smooth link hovering.
 			}
 		}
-	} );
+	}
+} );
 
+function App( ) {
 	const fadeTransition = {
 		atEnter: {
 			opacity: 0

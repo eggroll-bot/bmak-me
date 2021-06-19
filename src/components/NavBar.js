@@ -22,12 +22,14 @@ function NavBar( props ) {
 				</Grid>
 
 				<Grid item xs={ 8 }>
-					<Typography align="center" style={ { alignItems: "center", display: "flex", fontWeight: 800, height: "100%", justifyContent: "center" } } variant="h2">{props.title || document.title}</Typography>
+					<Typography align="center" style={ { alignItems: "center", display: "flex", fontWeight: 800, height: "100%", justifyContent: "center" } } variant="h2">
+						{props.title || document.title}
+					</Typography>
 				</Grid>
 
 				<Grid item xs={ 2 }>
 					<div style={ { float: "right", height: 105, width: 120, padding: "15px", paddingRight: "30px" } }>
-						<Avatar alt="Profile Picture" className="Avatar" src={ pfpImage } style={ { height: 75, width: 75 } }></Avatar>
+						<Avatar alt="Profile Picture" className="Avatar" src={ pfpImage } style={ { height: 75, width: 75 } } />
 					</div>
 				</Grid>
 			</Grid>

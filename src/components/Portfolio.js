@@ -6,7 +6,9 @@ function Portfolio( ) {
 	return (
 		<>
 			<InnerPage title="🤖 Portfolio">
-				<Typography align="center" style={ { transform: "translateY( calc( 50vh - 250% ) )" } } variant="h3">This page is under construction.</Typography>
+				<Typography align="center" style={ { transform: "translateY( calc( 50vh - 250% ) )" } } variant="h3">
+					This page is under construction.
+				</Typography>
 			</InnerPage>
 		</>
 	);
