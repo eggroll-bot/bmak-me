@@ -23,7 +23,7 @@ function NavBar( props ) {
 
 				<Grid item xs={ 8 }>
 					<Typography align="center" style={ { alignItems: "center", display: "flex", fontWeight: 800, height: "100%", justifyContent: "center" } } variant="h2">
-						{props.title || document.title}
+						{ props.title || document.title }
 					</Typography>
 				</Grid>
 

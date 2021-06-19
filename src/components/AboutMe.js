@@ -7,7 +7,9 @@ import { Link } from "react-router-dom";
 const useStyles = makeStyles( {
 	bodyText: {
 		fontSize: 22,
-		fontWeight: 400
+		fontWeight: 400,
+		marginBottom: "24px",
+		textAlign: "justify"
 	}
 } );
 
@@ -15,28 +17,34 @@ function AboutMe( ) {
 	const classes = useStyles( );
 
 	const paragraphOne = `
-		Hello! Welcome to my website. I'm Brian Mak. I'm a student at the University of California, Santa Cruz campus majoring in computer science with plans
-		to minor in technology and information management. I like to contribute to open source in my free time, and have an interest in software development
-		and IT.
+		Hello! Welcome to my website. I'm Brian Mak. I'm a student at the University of California, Santa Cruz campus majoring in computer science with
+		plans to minor in technology and information management. I like to create open-source side projects in my free time, and have an interest in
+		software development and information technology.
 	`;
 
 	const paragraphTwo = `
-		This page is still under construction.
+		This page is still a work-in-progress.
 	`;
+
+	const paragraphThree = (
+		<>
+			Feel free to check out what I&apos;ve been up to recently. My portfolio can be found <Link to="/portfolio">here</Link>.
+		</>
+	);
 
 	return (
 		<>
 			<InnerPage title="👋 About Me">
 				<Typography align="left" className={ classes.bodyText } paragraph={ true }>
-					{paragraphOne}
+					{ paragraphOne }
 				</Typography>
 
 				<Typography align="left" className={ classes.bodyText } paragraph={ true }>
-					{paragraphTwo}
+					{ paragraphTwo }
 				</Typography>
 
 				<Typography align="left" className={ classes.bodyText } paragraph={ true }>
-					Feel free to check out what I&apos;ve been up to recently. My portfolio is linked <Link to="/portfolio">here</Link>.
+					{ paragraphThree }
 				</Typography>
 			</InnerPage>
 		</>
