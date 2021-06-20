@@ -11,7 +11,7 @@ function InnerPage( props ) {
 			<NavBar />
 
 			<div style={ { paddingLeft: "5%", paddingRight: "5%", paddingTop: "30px" } }>
-				<Typography align="center" paragraph={ true } style={ { fontWeight: 800 } } variant="h2">
+				<Typography align="center" style={ { fontWeight: 800, paddingBottom: "40px" } } variant="h2">
 					{ document.title }
 				</Typography>
 
