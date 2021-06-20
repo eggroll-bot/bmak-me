@@ -20,7 +20,6 @@ a:hover {
 }
 
 .Avatar {
-	border: 2px solid grey;
 	transition: transform 0.3s;
 }
 
