@@ -1,8 +1,8 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import InnerPage from "./InnerPage";
-import { Typography } from "@material-ui/core";
-import { Link } from "react-router-dom";
+import { Link, Typography } from "@material-ui/core";
+import { Link as RouterLink } from "react-router-dom";
 
 const useStyles = makeStyles( {
 	bodyText: {
@@ -35,7 +35,13 @@ function AboutMe( ) {
 		`,
 		<>
 			Wanna know what I&apos;ve been up to recently? Feel free to check out my portfolio. My portfolio and résumé can be found&nbsp;
-			<Link to="/portfolio">here</Link>.
+			<RouterLink to="/portfolio">here</RouterLink>
+			.
+		</>,
+		<>
+			If you want to reach out to me, feel free to contact me by email at&nbsp;
+			<Link color="secondary" href="mailto:brian@bmak.xyz">brian@bmak.xyz</Link>
+			.
 		</>
 	];
 
