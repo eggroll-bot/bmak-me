@@ -61,26 +61,24 @@ function App( ) {
 	};
 
 	return (
-		<>
-			<HashRouter>
-				<MuiThemeProvider theme={ theme }>
-					<CssBaseline />
-					<AnimatedSwitch atActive={ fadeTransition.atActive } atEnter={ fadeTransition.atEnter } atLeave={ fadeTransition.atLeave } className="switch-wrapper">
-						<Route path="/about-me">
-							<AboutMe />
-						</Route>
+		<HashRouter>
+			<MuiThemeProvider theme={ theme }>
+				<CssBaseline />
+				<AnimatedSwitch atActive={ fadeTransition.atActive } atEnter={ fadeTransition.atEnter } atLeave={ fadeTransition.atLeave } className="switch-wrapper">
+					<Route path="/about-me">
+						<AboutMe />
+					</Route>
 
-						<Route path="/portfolio">
-							<Portfolio />
-						</Route>
+					<Route path="/portfolio">
+						<Portfolio />
+					</Route>
 
-						<Route path="/">
-							<Home />
-						</Route>
-					</AnimatedSwitch>
-				</MuiThemeProvider>
-			</HashRouter>
-		</>
+					<Route path="/">
+						<Home />
+					</Route>
+				</AnimatedSwitch>
+			</MuiThemeProvider>
+		</HashRouter>
 	);
 }
 

@@ -6,15 +6,13 @@ function InnerPage( props ) {
 	document.title = props.title;
 
 	return (
-		<>
-			<div style={ { margin: "auto", maxWidth: "1200px" } }>
-				<NavBar />
+		<div style={ { margin: "auto", maxWidth: "1200px" } }>
+			<NavBar />
 
-				<div style={ { paddingLeft: "5%", paddingRight: "5%", paddingTop: "30px" } }>
-					{ props.children }
-				</div>
+			<div style={ { paddingLeft: "5%", paddingRight: "5%", paddingTop: "30px" } }>
+				{ props.children }
 			</div>
-		</>
+		</div>
 	);
 }
 
