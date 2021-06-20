@@ -28,10 +28,8 @@ function AboutMe( ) {
 		`,
 		`
 		During the academic year, I am seeking tutoring positions for computer science courses. During my first year at UC Santa Cruz, I tutored for a
-		computer systems and assembly language course. Tutoring for that course turned out to be quite rewarding. As tutors, we're not expected to know
-		everything there is to know about the course's topics, but we are expected to have a good understanding of them. Tutoring for that course solidified
-		my understanding of the course's topics and filled in the gaps. It also helped me further develop my communication and problem-solving skills. I
-		hope to take these skills with me down whichever path I decide to take in the future.
+		computer systems and assembly language course. Tutoring for that course turned out to be quite rewarding and it helped me further develop my
+		communication and problem-solving skills. I hope to take these skills with me down whichever path I decide to take in the future.
 		`,
 		<>
 			Wanna know what I&apos;ve been up to recently? Feel free to check out my portfolio. My portfolio and résumé can be found&nbsp;
