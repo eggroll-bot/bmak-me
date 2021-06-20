@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
 import { Avatar, Box, Button, Grid, Link, Typography } from "@material-ui/core";
-import pfpImage from "../images/pfp.png";
+import pfpImage from "../media/pfp.png";
 import { Code as CodeIcon, GitHub as GitHubIcon, Info as InfoIcon, LinkedIn as LinkedInIcon } from "@material-ui/icons";
 import { useHistory } from "react-router-dom";
 

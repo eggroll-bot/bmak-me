@@ -1,7 +1,7 @@
 import React from "react";
 import { Avatar, Grid, Typography } from "@material-ui/core";
 import { Link } from "react-router-dom";
-import pfpImage from "../images/pfp.png";
+import pfpImage from "../media/pfp.png";
 
 function NavBar( ) {
 	return (
