@@ -5,8 +5,8 @@ import { Typography } from "@material-ui/core";
 function Portfolio( ) {
 	return (
 		<InnerPage title="🤖 Portfolio">
-			<Typography align="center" variant="h3">
-					This page is under construction.
+			<Typography align="center" variant="h4">
+				🚧 This page is under construction. 🚧
 			</Typography>
 		</InnerPage>
 	);
