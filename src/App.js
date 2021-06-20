@@ -18,8 +18,8 @@ function fade( value ) {
 const theme = createMuiTheme( {
 	palette: {
 		background: {
-			default: "#242424",
-			paper: "#333333"
+			default: "#1A1A1A",
+			paper: "#1A1A1A"
 		},
 		primary: {
 			main: "#FFF640"
