@@ -10,19 +10,10 @@ a:hover {
 	text-decoration: underline solid currentcolor;
 }
 
-.switch-wrapper {
-	position: relative;
-}
-
-.switch-wrapper > div {
-	position: absolute;
-	width: 100%;
-}
-
-.Avatar {
+.avatar {
 	transition: transform 0.3s;
 }
 
-.Avatar:hover {
+.avatar:hover {
 	transform: scale3d( 1.1, 1.1, 1 );
 }

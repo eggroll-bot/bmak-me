@@ -15,7 +15,7 @@ function Home( ) {
 	return (
 		<div className="Home">
 			<Box mb={ 3 }>
-				<Avatar alt="Eggroll Profile Picture" className="Avatar" src={ pfpImage } />
+				<Avatar alt="Eggroll Profile Picture" className="avatar" src={ pfpImage } />
 			</Box>
 
 			<Box mb={ 3 }>

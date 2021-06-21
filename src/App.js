@@ -2,18 +2,11 @@ import React from "react";
 import "./App.css";
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
 import { HashRouter, Route } from "react-router-dom";
-import { AnimatedSwitch, spring } from "react-router-transition";
 import { CssBaseline } from "@material-ui/core";
+import FadeSwitch from "./components/FadeSwitch";
 import Home from "./components/Home";
 import AboutMe from "./components/AboutMe";
 import Portfolio from "./components/Portfolio";
-
-function fade( value ) {
-	return spring( value, {
-		stiffness: 275,
-		damping: 25,
-	} );
-}
 
 const theme = createMuiTheme( {
 	palette: {
@@ -58,27 +51,16 @@ const theme = createMuiTheme( {
 } );
 
 function App( ) {
-	const fadeTransition = {
-		atEnter: {
-			opacity: 0
-		},
-		atLeave: {
-			opacity: fade( 0 )
-		},
-		atActive: {
-			opacity: fade( 1 )
-		},
-	};
-
 	return (
 		<HashRouter>
 			<MuiThemeProvider theme={ theme }>
 				<CssBaseline />
-				<AnimatedSwitch atActive={ fadeTransition.atActive } atEnter={ fadeTransition.atEnter } atLeave={ fadeTransition.atLeave } className="switch-wrapper">
+
+				<FadeSwitch>
 					<Route component={ AboutMe } path="/about-me" />
 					<Route component={ Portfolio } path="/portfolio" />
 					<Route component={ Home } path="/" />
-				</AnimatedSwitch>
+				</FadeSwitch>
 			</MuiThemeProvider>
 		</HashRouter>
 	);

@@ -1,4 +1,5 @@
 import React from "react";
+import FadeSwitch from "./FadeSwitch";
 import { Route } from "react-router-dom";
 import InnerPage from "./InnerPage";
 import { Grid, Typography } from "@material-ui/core";
@@ -75,21 +76,27 @@ const portfolioContent = [
 
 function Portfolio( props ) {
 	return (
-		<Route path={ props.match.url }>
-			<InnerPage title="🤖 Portfolio">
-				<Typography align="center" style={ { paddingBottom: "40px" } } variant="h4">
-				🚧 This page is under construction. 🚧
-				</Typography>
+		<FadeSwitch>
+			<Route path={ props.match.url + "/test" }>
+				Test
+			</Route>
 
-				<Grid container justify="center" spacing={ 2 }>
-					{ portfolioContent.map( ( item, index ) => (
-						<Grid item key={ index } style={ { width: 512 } }>
-							<PortfolioCard cover={ item.cover } height={ 288 } image={ item.image } text={ item.name } />
-						</Grid>
-					) ) }
-				</Grid>
-			</InnerPage>
-		</Route>
+			<Route path={ props.match.url }>
+				<InnerPage title="🤖 Portfolio">
+					<Typography align="center" style={ { paddingBottom: "40px" } } variant="h4">
+						🚧 This page is under construction. 🚧
+					</Typography>
+
+					<Grid container justify="center" spacing={ 2 }>
+						{ portfolioContent.map( ( item, index ) => (
+							<Grid item key={ index } style={ { width: 512 } }>
+								<PortfolioCard cover={ item.cover } height={ 288 } image={ item.image } text={ item.name } />
+							</Grid>
+						) ) }
+					</Grid>
+				</InnerPage>
+			</Route>
+		</FadeSwitch>
 	);
 }
 

@@ -16,7 +16,7 @@ function NavBar( ) {
 
 			<Grid item xs={ 6 }>
 				<div style={ { float: "right", height: 105, width: 120, padding: "15px", paddingRight: "30px" } }>
-					<Avatar alt="Profile Picture" className="Avatar" src={ pfpImage } style={ { height: 75, width: 75 } } />
+					<Avatar alt="Profile Picture" className="avatar" src={ pfpImage } style={ { height: 75, width: 75 } } />
 				</div>
 			</Grid>
 		</Grid>
