@@ -12,7 +12,7 @@ function NavBar( props ) {
 					<Typography style={ { alignItems: "center", display: "flex", fontSize: "24px", height: 75 } }>
 						{
 							props.backButton ?
-								<Link color="secondary" href="#" onClick={ ( ) => { window.history.back( ); } }>&lt;- Back</Link> :
+								<Link color="secondary" href="#" onClick={ ( ) => { window.history.back( ); } }>&lt;- Back</Link> : // TO-DO: Back button doesn't seem to work on iOS.
 								<RouterLink to="/">&lt;- Home</RouterLink>
 						}
 					</Typography>
