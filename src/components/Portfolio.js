@@ -1,7 +1,9 @@
 import React from "react";
+import { Route } from "react-router-dom";
 import InnerPage from "./InnerPage";
 import { Grid, Typography } from "@material-ui/core";
 import PortfolioCard from "./PortfolioCard";
+import PropTypes from "prop-types";
 
 import bmakXyzImageOne from "../media/portfolio/bmak_xyz/image1.jpg";
 import huffmanCodingImageThree from "../media/portfolio/huffman_coding/image3.png";
@@ -71,22 +73,28 @@ const portfolioContent = [
 	}
 ];
 
-function Portfolio( ) {
+function Portfolio( props ) {
 	return (
-		<InnerPage title="🤖 Portfolio">
-			<Typography align="center" style={ { paddingBottom: "40px" } } variant="h4">
+		<Route path={ props.match.url }>
+			<InnerPage title="🤖 Portfolio">
+				<Typography align="center" style={ { paddingBottom: "40px" } } variant="h4">
 				🚧 This page is under construction. 🚧
-			</Typography>
+				</Typography>
 
-			<Grid container justify="center" spacing={ 2 }>
-				{ portfolioContent.map( ( item, index ) => (
-					<Grid item key={ index } style={ { width: 512 } }>
-						<PortfolioCard cover={ item.cover } height={ 288 } image={ item.image } text={ item.name } />
-					</Grid>
-				) ) }
-			</Grid>
-		</InnerPage>
+				<Grid container justify="center" spacing={ 2 }>
+					{ portfolioContent.map( ( item, index ) => (
+						<Grid item key={ index } style={ { width: 512 } }>
+							<PortfolioCard cover={ item.cover } height={ 288 } image={ item.image } text={ item.name } />
+						</Grid>
+					) ) }
+				</Grid>
+			</InnerPage>
+		</Route>
 	);
 }
+
+Portfolio.propTypes = {
+	match: PropTypes.object.isRequired
+};
 
 export default Portfolio;

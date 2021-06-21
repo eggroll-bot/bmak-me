@@ -75,17 +75,9 @@ function App( ) {
 			<MuiThemeProvider theme={ theme }>
 				<CssBaseline />
 				<AnimatedSwitch atActive={ fadeTransition.atActive } atEnter={ fadeTransition.atEnter } atLeave={ fadeTransition.atLeave } className="switch-wrapper">
-					<Route path="/about-me">
-						<AboutMe />
-					</Route>
-
-					<Route path="/portfolio">
-						<Portfolio />
-					</Route>
-
-					<Route path="/">
-						<Home />
-					</Route>
+					<Route component={ AboutMe } path="/about-me" />
+					<Route component={ Portfolio } path="/portfolio" />
+					<Route component={ Home } path="/" />
 				</AnimatedSwitch>
 			</MuiThemeProvider>
 		</HashRouter>
