@@ -31,7 +31,7 @@ paragraphs: array // An array of strings with each string being a paragraph in t
 
 const portfolioContent = [
 	{
-		name: "bmak.xyz",
+		name: "🌐 bmak.xyz",
 		image: bmakXyzImageOne,
 		cover: true,
 		url: "bmak-xyz",
@@ -41,7 +41,7 @@ const portfolioContent = [
 		]
 	},
 	{
-		name: "Huffman Coding",
+		name: "🗜️ Huffman Coding",
 		image: huffmanCodingImageThree,
 		cover: false,
 		url: "huffman-coding",
@@ -51,7 +51,7 @@ const portfolioContent = [
 		]
 	},
 	{
-		name: "Hamming Codes",
+		name: "♾️ Hamming Codes",
 		image: hammingCodesImageThree,
 		cover: false,
 		url: "hamming-codes",
@@ -61,7 +61,7 @@ const portfolioContent = [
 		]
 	},
 	{
-		name: "Sorting Algorithms",
+		name: "🔀 Sorting Algorithms",
 		image: sortingAlgorithmsImageTwo,
 		cover: true,
 		url: "sorting-algorithms",
@@ -71,7 +71,7 @@ const portfolioContent = [
 		]
 	},
 	{
-		name: "Easy Dental VixWin Bridge",
+		name: "🌉 Easy Dental VixWin Bridge",
 		image: easydentalVixwinBridgeImageOne,
 		cover: true,
 		url: "easydental-vixwin-bridge",
@@ -81,7 +81,7 @@ const portfolioContent = [
 		]
 	},
 	{
-		name: "VixWin Intraoral Camera Integration",
+		name: "📷 VixWin Intraoral Camera Integration",
 		image: vixwinIntraoralImageOne,
 		cover: true,
 		url: "vixwin-intraoral-camera-integration",
@@ -91,7 +91,7 @@ const portfolioContent = [
 		]
 	},
 	{
-		name: "Garry's Mod - Auto Body NPC",
+		name: "🏎️ Garry's Mod - Auto Body NPC",
 		image: autoBodyNpcImageOne,
 		cover: true,
 		url: "auto-body-npc",
@@ -101,7 +101,7 @@ const portfolioContent = [
 		]
 	},
 	{
-		name: "Garry's Mod - Anticrash",
+		name: "💥 Garry's Mod - Anticrash",
 		image: anticrashImageOne,
 		cover: true,
 		url: "anticrash",
@@ -111,7 +111,7 @@ const portfolioContent = [
 		]
 	},
 	{
-		name: "Garry's Mod - Anticheat",
+		name: "🚫 Garry's Mod - Anticheat",
 		image: anticheatImageOne,
 		cover: true,
 		url: "anticheat",
