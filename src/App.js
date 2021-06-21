@@ -19,7 +19,7 @@ const theme = createMuiTheme( {
 	palette: {
 		background: {
 			default: "#1A1A1A",
-			paper: "#242424"
+			paper: "#2E2E2E"
 		},
 		primary: {
 			main: "#FFF640"
@@ -37,6 +37,16 @@ const theme = createMuiTheme( {
 			root: {
 				height: "100px",
 				width: "100px"
+			}
+		},
+		MuiCardContent: {
+			root: {
+				backgroundColor: "#262626"
+			}
+		},
+		MuiCardMedia: {
+			img: {
+				objectFit: "contain"
 			}
 		},
 		MuiLink: {
