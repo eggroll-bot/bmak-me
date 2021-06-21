@@ -127,7 +127,7 @@ function Portfolio( props ) {
 		<FadeSwitch>
 			{ portfolioContent.map( ( item, index ) => (
 				<Route key={ index } path={ props.match.url + "/" + item.url }>
-					<PortfolioContentPage paragraphs={ item.paragraphs } />
+					<PortfolioContentPage paragraphs={ item.paragraphs } title={ item.name } />
 				</Route>
 			) ) }
 

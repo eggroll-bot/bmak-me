@@ -1,7 +1,7 @@
 import React from "react";
-import { Card, CardActionArea, CardContent, CardMedia, Typography } from "@material-ui/core";
 import { withStyles } from "@material-ui/styles";
 import { useHistory } from "react-router-dom";
+import { Card, CardActionArea, CardContent, CardMedia, Typography } from "@material-ui/core";
 import PropTypes from "prop-types";
 
 const CardMediaImageCover = withStyles( {

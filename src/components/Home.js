@@ -1,9 +1,9 @@
 import React from "react";
 import "./Home.css";
+import { useHistory } from "react-router-dom";
 import { Avatar, Box, Button, Grid, Link, Typography } from "@material-ui/core";
 import pfpImage from "../media/pfp.png";
 import { Code as CodeIcon, GitHub as GitHubIcon, Info as InfoIcon, LinkedIn as LinkedInIcon } from "@material-ui/icons";
-import { useHistory } from "react-router-dom";
 
 const gitHubLink = "https://github.com/eggroll-bot";
 const linkedInLink = "https://www.linkedin.com/in/brian-mak/";

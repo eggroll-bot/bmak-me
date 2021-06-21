@@ -1,15 +1,23 @@
 import React from "react";
-import { Avatar, Grid, Typography } from "@material-ui/core";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+import { Avatar, Grid, Link, Typography } from "@material-ui/core";
+import { Link as RouterLink } from "react-router-dom";
 import pfpImage from "../media/pfp.png";
+import PropTypes from "prop-types";
 
-function NavBar( ) {
+function NavBar( props ) {
+	const history = useHistory( );
+
 	return (
 		<Grid container>
 			<Grid item xs={ 6 }>
 				<div style={ { height: 105, padding: "15px", paddingLeft: "30px" } }>
 					<Typography style={ { alignItems: "center", display: "flex", fontSize: "24px", height: 75 } }>
-						<Link to="/">&lt;- Home</Link>
+						{
+							props.backButton ?
+								<Link color="secondary" href="#" onClick={ ( ) => { history.goBack( ); } }>&lt;- Back</Link> :
+								<RouterLink to="/">&lt;- Home</RouterLink>
+						}
 					</Typography>
 				</div>
 			</Grid>
@@ -22,5 +30,9 @@ function NavBar( ) {
 		</Grid>
 	);
 }
+
+NavBar.propTypes = {
+	backButton: PropTypes.bool
+};
 
 export default NavBar;
