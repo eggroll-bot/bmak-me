@@ -1,11 +1,12 @@
 import React from "react";
 import InnerPage from "./InnerPage";
-import { Card, CardActionArea, CardContent, CardMedia, Grid, Typography } from "@material-ui/core";
-import { withStyles } from "@material-ui/styles";
+import { Grid, Typography } from "@material-ui/core";
+import PortfolioCard from "./PortfolioCard";
+
 import bmakXyzImageOne from "../media/portfolio/bmak_xyz/image1.jpg";
-import huffmanCodingImageOne from "../media/portfolio/huffman_coding/image3.png";
-import hammingCodesImageOne from "../media/portfolio/hamming_codes/image3.png";
-import sortingAlgorithmsImageOne from "../media/portfolio/sorting_algorithms/image2.png";
+import huffmanCodingImageThree from "../media/portfolio/huffman_coding/image3.png";
+import hammingCodesImageThree from "../media/portfolio/hamming_codes/image3.png";
+import sortingAlgorithmsImageTwo from "../media/portfolio/sorting_algorithms/image2.png";
 import easydentalVixwinBridgeImageOne from "../media/pfp.png"; // TO-DO: Coming soon...
 import vixwinIntraoralImageOne from "../media/pfp.png"; // TO-DO: Coming soon...
 import autoBodyNpcImageOne from "../media/portfolio/auto_body_npc/image1.jpg";
@@ -30,17 +31,17 @@ const portfolioContent = [
 	},
 	{
 		name: "Huffman Coding",
-		image: huffmanCodingImageOne,
+		image: huffmanCodingImageThree,
 		cover: false
 	},
 	{
 		name: "Hamming Codes",
-		image: hammingCodesImageOne,
+		image: hammingCodesImageThree,
 		cover: false
 	},
 	{
 		name: "Sorting Algorithms",
-		image: sortingAlgorithmsImageOne,
+		image: sortingAlgorithmsImageTwo,
 		cover: true
 	},
 	{
@@ -70,12 +71,6 @@ const portfolioContent = [
 	}
 ];
 
-const CardMediaImageCover = withStyles( {
-	img: {
-		objectFit: "cover"
-	}
-} )( CardMedia );
-
 function Portfolio( ) {
 	return (
 		<InnerPage title="🤖 Portfolio">
@@ -86,19 +81,7 @@ function Portfolio( ) {
 			<Grid container justify="center" spacing={ 2 }>
 				{ portfolioContent.map( ( item, index ) => (
 					<Grid item key={ index } style={ { width: 512 } }>
-						<Card variant="outlined">
-							<CardActionArea onClick={ ( ) => { /* TO-DO: Go to correct page. */ } }>
-								{
-									item.cover ?
-										<CardMediaImageCover component="img" src={ item.image } style={ { height: 288 } } /> :
-										<CardMedia component="img" src={ item.image } style={ { height: 288 } } />
-								}
-
-								<CardContent>
-									<Typography align="center">{ item.name }</Typography>
-								</CardContent>
-							</CardActionArea>
-						</Card>
+						<PortfolioCard cover={ item.cover } height={ 288 } image={ item.image } text={ item.name } />
 					</Grid>
 				) ) }
 			</Grid>
