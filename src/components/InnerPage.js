@@ -8,7 +8,7 @@ function InnerPage( props ) {
 
 	return (
 		<div style={ { margin: "auto", maxWidth: "1200px" } }>
-			<NavBar backButton={ props.backButton } />
+			<NavBar />
 
 			<div style={ { paddingLeft: "5%", paddingRight: "5%", paddingTop: "30px" } }>
 				<Typography align="center" style={ { fontWeight: 800, paddingBottom: "40px" } } variant="h2">
@@ -22,7 +22,6 @@ function InnerPage( props ) {
 }
 
 InnerPage.propTypes = {
-	backButton: PropTypes.bool,
 	children: PropTypes.oneOfType( [
 		PropTypes.arrayOf( PropTypes.node ),
 		PropTypes.node

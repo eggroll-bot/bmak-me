@@ -1,6 +1,7 @@
 import React from "react";
 import FadeSwitch from "./FadeSwitch";
 import { Route } from "react-router-dom";
+import BackButtonContext from "../contexts/back-button-context";
 import PortfolioContentPage from "./PortfolioContentPage";
 import InnerPage from "./InnerPage";
 import { Grid, Typography } from "@material-ui/core";
@@ -127,7 +128,9 @@ function Portfolio( props ) {
 		<FadeSwitch>
 			{ portfolioContent.map( ( item, index ) => (
 				<Route key={ index } path={ props.match.url + "/" + item.url }>
-					<PortfolioContentPage paragraphs={ item.paragraphs } title={ item.name } />
+					<BackButtonContext.Provider value={ props.match.url }>
+						<PortfolioContentPage paragraphs={ item.paragraphs } title={ item.name } />
+					</BackButtonContext.Provider>
 				</Route>
 			) ) }
 

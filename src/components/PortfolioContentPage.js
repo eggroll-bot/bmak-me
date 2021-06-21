@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 function PortfolioContentPage( props ) {
 	return (
-		<InnerPage backButton={ true } title={ props.title }>
+		<InnerPage title={ props.title }>
 			<Typography align="center" style={ { paddingBottom: "40px" } } variant="h4">
 				🚧 This page is under construction. 🚧
 			</Typography>
