@@ -1,6 +1,7 @@
 import React from "react";
 import FadeSwitch from "./FadeSwitch";
 import { Route } from "react-router-dom";
+import PortfolioContentPage from "./PortfolioContentPage";
 import InnerPage from "./InnerPage";
 import { Grid, Typography } from "@material-ui/core";
 import PortfolioCard from "./PortfolioCard";
@@ -23,6 +24,8 @@ Portfolio Content Format:
 name: string // Name of portfolio entry to display.
 image: string // Path to an image to display on the portfolio page.
 cover: boolean // Whether the image should cover the entire space. Image may be cut off to have correct aspect ratio.
+url: string // The part of the URL after portfolio/.
+paragraphs: array // An array of strings with each string being a paragraph in the portfolio content page.
 
 */
 
@@ -30,56 +33,103 @@ const portfolioContent = [
 	{
 		name: "bmak.xyz",
 		image: bmakXyzImageOne,
-		cover: true
+		cover: true,
+		url: "bmak-xyz",
+		paragraphs: [
+			"Testing",
+			"123"
+		]
 	},
 	{
 		name: "Huffman Coding",
 		image: huffmanCodingImageThree,
-		cover: false
+		cover: false,
+		url: "huffman-coding",
+		paragraphs: [
+			"Testing",
+			"123"
+		]
 	},
 	{
 		name: "Hamming Codes",
 		image: hammingCodesImageThree,
-		cover: false
+		cover: false,
+		url: "hamming-codes",
+		paragraphs: [
+			"Testing",
+			"123"
+		]
 	},
 	{
 		name: "Sorting Algorithms",
 		image: sortingAlgorithmsImageTwo,
-		cover: true
+		cover: true,
+		url: "sorting-algorithms",
+		paragraphs: [
+			"Testing",
+			"123"
+		]
 	},
 	{
 		name: "Easy Dental VixWin Bridge",
 		image: easydentalVixwinBridgeImageOne,
-		cover: true
+		cover: true,
+		url: "easydental-vixwin-bridge",
+		paragraphs: [
+			"Testing",
+			"123"
+		]
 	},
 	{
 		name: "VixWin Intraoral Camera Integration",
 		image: vixwinIntraoralImageOne,
-		cover: true
+		cover: true,
+		url: "vixwin-intraoral-camera-integration",
+		paragraphs: [
+			"Testing",
+			"123"
+		]
 	},
 	{
 		name: "Garry's Mod - Auto Body NPC",
 		image: autoBodyNpcImageOne,
-		cover: true
+		cover: true,
+		url: "auto-body-npc",
+		paragraphs: [
+			"Testing",
+			"123"
+		]
 	},
 	{
 		name: "Garry's Mod - Anticrash",
 		image: anticrashImageOne,
-		cover: true
+		cover: true,
+		url: "anticrash",
+		paragraphs: [
+			"Testing",
+			"123"
+		]
 	},
 	{
 		name: "Garry's Mod - Anticheat",
 		image: anticheatImageOne,
-		cover: true
+		cover: true,
+		url: "anticheat",
+		paragraphs: [
+			"Testing",
+			"123"
+		]
 	}
 ];
 
 function Portfolio( props ) {
 	return (
 		<FadeSwitch>
-			<Route path={ props.match.url + "/test" }>
-				Test
-			</Route>
+			{ portfolioContent.map( ( item, index ) => (
+				<Route key={ index } path={ props.match.url + "/" + item.url }>
+					<PortfolioContentPage paragraphs={ item.paragraphs } />
+				</Route>
+			) ) }
 
 			<Route path={ props.match.url }>
 				<InnerPage title="🤖 Portfolio">
@@ -90,7 +140,7 @@ function Portfolio( props ) {
 					<Grid container justify="center" spacing={ 2 }>
 						{ portfolioContent.map( ( item, index ) => (
 							<Grid item key={ index } style={ { width: 512 } }>
-								<PortfolioCard cover={ item.cover } height={ 288 } image={ item.image } text={ item.name } />
+								<PortfolioCard cover={ item.cover } height={ 288 } image={ item.image } path={ props.match.url + "/" + item.url } text={ item.name } />
 							</Grid>
 						) ) }
 					</Grid>

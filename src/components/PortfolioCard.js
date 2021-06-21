@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, CardActionArea, CardContent, CardMedia, Typography } from "@material-ui/core";
 import { withStyles } from "@material-ui/styles";
+import { useHistory } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const CardMediaImageCover = withStyles( {
@@ -10,9 +11,11 @@ const CardMediaImageCover = withStyles( {
 } )( CardMedia );
 
 function PortfolioCard( props ) {
+	const history = useHistory( );
+
 	return (
 		<Card variant="outlined">
-			<CardActionArea onClick={ ( ) => { /* TO-DO: Go to correct page. */ } }>
+			<CardActionArea onClick={ ( ) => { history.push( props.path ); } }>
 				{
 					props.cover ?
 						<CardMediaImageCover component="img" src={ props.image } style={ { height: props.height || "100%", width: props.width || "100%" } } /> :
@@ -31,6 +34,7 @@ PortfolioCard.propTypes = {
 	cover: PropTypes.bool,
 	height: PropTypes.number,
 	image: PropTypes.string.isRequired,
+	path: PropTypes.string.isRequired,
 	text: PropTypes.string.isRequired,
 	width: PropTypes.number
 };
