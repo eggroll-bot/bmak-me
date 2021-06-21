@@ -15,7 +15,7 @@ class NavBar extends React.Component {
 						<Typography style={ { alignItems: "center", display: "flex", fontSize: "24px", height: 75 } }>
 							{
 								this.context ?
-									<Link color="secondary" onClick={ ( ) => { this.props.history.push( this.context ); } }>&lt;- Back</Link> :
+									<Link color="secondary" onClick={ ( ) => { this.props.history.push( this.context ); } } style={ { cursor: "pointer" } }>&lt;- Back</Link> :
 									<RouterLink to="/">&lt;- Home</RouterLink>
 							}
 						</Typography>
