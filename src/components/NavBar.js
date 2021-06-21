@@ -1,13 +1,10 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
 import { Avatar, Grid, Link, Typography } from "@material-ui/core";
 import { Link as RouterLink } from "react-router-dom";
 import pfpImage from "../media/pfp.png";
 import PropTypes from "prop-types";
 
 function NavBar( props ) {
-	const history = useHistory( );
-
 	return (
 		<Grid container>
 			<Grid item xs={ 6 }>
@@ -15,7 +12,7 @@ function NavBar( props ) {
 					<Typography style={ { alignItems: "center", display: "flex", fontSize: "24px", height: 75 } }>
 						{
 							props.backButton ?
-								<Link color="secondary" href="#" onClick={ ( ) => { history.goBack( ); } }>&lt;- Back</Link> :
+								<Link color="secondary" href="#" onClick={ ( ) => { window.history.back( ); } }>&lt;- Back</Link> :
 								<RouterLink to="/">&lt;- Home</RouterLink>
 						}
 					</Typography>
