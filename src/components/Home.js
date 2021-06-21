@@ -40,7 +40,7 @@ function Home( ) {
 				</Typography>
 			</Box>
 
-			<Grid container align="center" justify="center" spacing={ 5 }>
+			<Grid container justify="center" spacing={ 5 }>
 				<Grid item>
 					<Button color="primary" onClick={ ( ) => { history.push( "/about-me" ); } } size="medium" startIcon={ <InfoIcon /> } variant="outlined">
 						About Me
