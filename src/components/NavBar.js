@@ -8,8 +8,6 @@ import PropTypes from "prop-types";
 
 class NavBar extends React.Component {
 	render( ) {
-		console.log( this.context );
-
 		return (
 			<Grid container>
 				<Grid item xs={ 6 }>
