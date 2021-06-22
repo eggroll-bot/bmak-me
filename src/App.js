@@ -50,6 +50,8 @@ const theme = createMuiTheme( {
 	}
 } );
 
+// TO-DO: Add scrolling restoration. See https://github.com/trevorr/react-scroll-manager. Package is already installed.
+
 function App( ) {
 	return (
 		<HashRouter>
