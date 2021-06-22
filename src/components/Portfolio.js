@@ -4,7 +4,7 @@ import { Route } from "react-router-dom";
 import BackButtonContext from "../contexts/back-button-context";
 import PortfolioContentPage from "./PortfolioContentPage";
 import InnerPage from "./InnerPage";
-import { Grid, Typography } from "@material-ui/core";
+import { Grid, Link, Typography } from "@material-ui/core";
 import PortfolioCard from "./PortfolioCard";
 import PropTypes from "prop-types";
 
@@ -138,6 +138,10 @@ function Portfolio( props ) {
 				<InnerPage title="🤖 Portfolio">
 					<Typography align="center" style={ { paddingBottom: "40px" } } variant="h4">
 						🚧 This page is under construction. 🚧
+					</Typography>
+
+					<Typography align="center" style={ { paddingBottom: "40px" } } variant="h4">
+						My résumé can be found <Link color="secondary" href="/resume.pdf" target="_blank">here</Link>.
 					</Typography>
 
 					<Grid container justify="center" spacing={ 2 }>
