@@ -15,7 +15,7 @@ function PortfolioCard( props ) {
 
 	return (
 		<Card variant="outlined">
-			<CardActionArea onClick={ ( ) => { history.push( props.path ); } }>
+			<CardActionArea disableTouchRipple onClick={ ( ) => { history.push( props.path ); } }>
 				{
 					props.cover ?
 						<CardMediaImageCover component="img" src={ props.image } style={ { height: props.height || "100%", width: props.width || "100%" } } /> :
