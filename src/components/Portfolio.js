@@ -13,7 +13,7 @@ import PropTypes from "prop-types";
 Portfolio Content Format:
 
 name: string // Name of portfolio entry to display.
-media: string // The folder in src/media/portfolio/ containing the portfolio entry's media.
+media: string // The folder in src/media/portfolio/ containing the portfolio entry's media. Gallery displays alphabetically. Only MP4 videos are allowed.
 image: string // The name of the image file in src/media/portfolio/[media]/ to use as the image shown on the main portfolio page.
 cover: boolean // Whether the image should cover the entire space. Image may be cut off to have correct aspect ratio.
 url: string // The part of the URL after portfolio/.
@@ -125,9 +125,9 @@ const portfolioContent = [
 
 const portfolioMedia = { };
 var context = require.context( "../media/portfolio" );
+const directoryRegex = /[^/]+/g;
 
 context.keys( ).forEach( ( filePath ) => {
-	const directoryRegex = /[^/]+/g;
 	const pathMatches = filePath.substring( 2 ).match( directoryRegex );
 	const mediaDirectoryName = pathMatches[ 0 ];
 	const mediaFileName = pathMatches[ 1 ];
@@ -141,7 +141,7 @@ function Portfolio( props ) {
 			{ portfolioContent.map( ( item, index ) => (
 				<Route key={ index } path={ props.match.url + "/" + item.url }>
 					<BackButtonContext.Provider value={ props.match.url }>
-						<PortfolioContentPage media={ portfolioMedia[ item.media ] } paragraphs={ item.paragraphs } title={ item.name } />
+						<PortfolioContentPage media={ Object.values( portfolioMedia[ item.media ] ) } paragraphs={ item.paragraphs } title={ item.name } />
 					</BackButtonContext.Provider>
 				</Route>
 			) ) }
