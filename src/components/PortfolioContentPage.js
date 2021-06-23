@@ -39,7 +39,7 @@ class PortfolioContentPage extends React.Component {
 		return (
 			<InnerPage title={ this.props.title }>
 				<Typography align="center" style={ { paddingBottom: "40px" } } variant="h4">
-				🚧 This page is under construction. 🚧
+					🚧 This page is under construction. 🚧
 				</Typography>
 
 				{

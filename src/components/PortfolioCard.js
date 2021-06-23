@@ -23,7 +23,9 @@ function PortfolioCard( props ) {
 				}
 
 				<CardContent>
-					<Typography align="center">{ props.text }</Typography>
+					<Typography align="center">
+						{ props.text }
+					</Typography>
 				</CardContent>
 			</CardActionArea>
 		</Card>
