@@ -8,22 +8,13 @@ import { Grid, Link, Typography } from "@material-ui/core";
 import PortfolioCard from "./PortfolioCard";
 import PropTypes from "prop-types";
 
-import bmakXyzImageOne from "../media/portfolio/bmak_xyz/image1.jpg";
-import huffmanCodingImageThree from "../media/portfolio/huffman_coding/image3.png";
-import hammingCodesImageThree from "../media/portfolio/hamming_codes/image3.png";
-import sortingAlgorithmsImageTwo from "../media/portfolio/sorting_algorithms/image2.png";
-import easydentalVixwinBridgeImageOne from "../media/pfp.png"; // TO-DO: Coming soon...
-import vixwinIntraoralImageOne from "../media/pfp.png"; // TO-DO: Coming soon...
-import autoBodyNpcImageOne from "../media/portfolio/auto_body_npc/image1.jpg";
-import anticrashImageOne from "../media/portfolio/anticrash/image1.jpg";
-import anticheatImageOne from "../media/portfolio/anticheat/image1.jpg";
-
 /*
 
 Portfolio Content Format:
 
 name: string // Name of portfolio entry to display.
-image: string // Path to an image to display on the portfolio page.
+media: string // The folder in src/media/portfolio/ containing the portfolio entry's media.
+image: string // The name of the image file in src/media/portfolio/[media]/ to use as the image shown on the main portfolio page.
 cover: boolean // Whether the image should cover the entire space. Image may be cut off to have correct aspect ratio.
 url: string // The part of the URL after portfolio/.
 paragraphs: array // An array of strings with each string being a paragraph in the portfolio content page.
@@ -33,7 +24,8 @@ paragraphs: array // An array of strings with each string being a paragraph in t
 const portfolioContent = [
 	{
 		name: "🌐 bmak.xyz",
-		image: bmakXyzImageOne,
+		media: "bmak_xyz",
+		image: "image1.jpg",
 		cover: true,
 		url: "bmak-xyz",
 		paragraphs: [
@@ -43,7 +35,8 @@ const portfolioContent = [
 	},
 	{
 		name: "🗜️ Huffman Coding",
-		image: huffmanCodingImageThree,
+		media: "huffman_coding",
+		image: "image3.png",
 		cover: false,
 		url: "huffman-coding",
 		paragraphs: [
@@ -53,7 +46,8 @@ const portfolioContent = [
 	},
 	{
 		name: "♾️ Hamming Codes",
-		image: hammingCodesImageThree,
+		media: "hamming_codes",
+		image: "image3.png",
 		cover: false,
 		url: "hamming-codes",
 		paragraphs: [
@@ -63,7 +57,8 @@ const portfolioContent = [
 	},
 	{
 		name: "🔀 Sorting Algorithms",
-		image: sortingAlgorithmsImageTwo,
+		media: "sorting_algorithms",
+		image: "image2.png",
 		cover: true,
 		url: "sorting-algorithms",
 		paragraphs: [
@@ -73,7 +68,8 @@ const portfolioContent = [
 	},
 	{
 		name: "🌉 Easy Dental VixWin Bridge",
-		image: easydentalVixwinBridgeImageOne,
+		media: "bmak_xyz", // TO-DO: Get media for this.
+		image: "image1.jpg",
 		cover: true,
 		url: "easydental-vixwin-bridge",
 		paragraphs: [
@@ -83,7 +79,8 @@ const portfolioContent = [
 	},
 	{
 		name: "📷 VixWin Intraoral Camera Integration",
-		image: vixwinIntraoralImageOne,
+		media: "bmak_xyz", // TO-DO: Get media for this.
+		image: "image1.jpg",
 		cover: true,
 		url: "vixwin-intraoral-camera-integration",
 		paragraphs: [
@@ -93,7 +90,8 @@ const portfolioContent = [
 	},
 	{
 		name: "🏎️ Garry's Mod - Auto Body NPC",
-		image: autoBodyNpcImageOne,
+		media: "auto_body_npc",
+		image: "image1.jpg",
 		cover: true,
 		url: "auto-body-npc",
 		paragraphs: [
@@ -103,7 +101,8 @@ const portfolioContent = [
 	},
 	{
 		name: "💥 Garry's Mod - Anticrash",
-		image: anticrashImageOne,
+		media: "anticrash",
+		image: "image1.jpg",
 		cover: true,
 		url: "anticrash",
 		paragraphs: [
@@ -113,7 +112,8 @@ const portfolioContent = [
 	},
 	{
 		name: "🚫 Garry's Mod - Anticheat",
-		image: anticheatImageOne,
+		media: "anticheat",
+		image: "image1.jpg",
 		cover: true,
 		url: "anticheat",
 		paragraphs: [
@@ -122,6 +122,18 @@ const portfolioContent = [
 		]
 	}
 ];
+
+const portfolioMedia = { };
+var context = require.context( "../media/portfolio" );
+
+context.keys( ).forEach( ( filePath ) => {
+	const directoryRegex = /[^/]+/g;
+	const pathMatches = filePath.substring( 2 ).match( directoryRegex );
+	const mediaDirectoryName = pathMatches[ 0 ];
+	const mediaFileName = pathMatches[ 1 ];
+	portfolioMedia[ mediaDirectoryName ] = portfolioMedia[ mediaDirectoryName ] || { }; // Create array if it doesn't exist.
+	portfolioMedia[ mediaDirectoryName ][ mediaFileName ] = context( filePath ).default;
+} );
 
 function Portfolio( props ) {
 	return (
@@ -147,7 +159,7 @@ function Portfolio( props ) {
 					<Grid container justify="center" spacing={ 2 }>
 						{ portfolioContent.map( ( item, index ) => (
 							<Grid item key={ index } style={ { width: 512 } }>
-								<PortfolioCard cover={ item.cover } height={ 288 } image={ item.image } path={ props.match.url + "/" + item.url } text={ item.name } />
+								<PortfolioCard cover={ item.cover } height={ 288 } image={ portfolioMedia[ item.media ][ item.image ] } path={ props.match.url + "/" + item.url } text={ item.name } />
 							</Grid>
 						) ) }
 					</Grid>
