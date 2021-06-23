@@ -127,10 +127,9 @@ const portfolioContent = [
 
 const portfolioMedia = { };
 var context = require.context( "../media/portfolio" );
-const directoryRegex = /[^/]+/g;
 
 context.keys( ).forEach( ( filePath ) => {
-	const pathMatches = filePath.substring( 2 ).match( directoryRegex );
+	const pathMatches = filePath.substring( 2 ).match( /[^/]+/g );
 	const mediaDirectoryName = pathMatches[ 0 ];
 	const mediaFileName = pathMatches[ 1 ];
 	portfolioMedia[ mediaDirectoryName ] = portfolioMedia[ mediaDirectoryName ] || { }; // Create array if it doesn't exist.

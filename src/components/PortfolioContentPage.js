@@ -15,8 +15,6 @@ const useStyles = ( ) => ( {
 	}
 } );
 
-const extensionRegex = /[^.]+$/;
-
 class PortfolioContentPage extends React.Component {
 	_renderVideo( item ) {
 		return (
@@ -26,7 +24,7 @@ class PortfolioContentPage extends React.Component {
 
 	render( ) {
 		const media = this.props.media.map( ( item ) => {
-			const extension = item.match( extensionRegex )[ 0 ];
+			const extension = item.match( /[^.]+$/ )[ 0 ];
 
 			if ( extension === "mp4" ) {
 				return {
