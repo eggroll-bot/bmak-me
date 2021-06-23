@@ -32,7 +32,7 @@ function PortfolioCard( props ) {
 
 PortfolioCard.propTypes = {
 	cover: PropTypes.bool,
-	height: PropTypes.number,
+	height: PropTypes.string,
 	image: PropTypes.string.isRequired,
 	path: PropTypes.string.isRequired,
 	text: PropTypes.string.isRequired,

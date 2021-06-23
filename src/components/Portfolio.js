@@ -170,7 +170,7 @@ function Portfolio( props ) {
 					<Grid container justify="center" spacing={ 2 }>
 						{ portfolioContent.map( ( item, index ) => (
 							<Grid item key={ index } style={ { width: 512 } }>
-								<PortfolioCard cover={ item.cover } height={ 288 } image={ portfolioMedia[ item.media ][ item.image ] } path={ props.match.url + "/" + item.url } text={ item.name } />
+								<PortfolioCard cover={ item.cover } height="288px" image={ portfolioMedia[ item.media ][ item.image ] } path={ props.match.url + "/" + item.url } text={ item.name } />
 							</Grid>
 						) ) }
 					</Grid>
