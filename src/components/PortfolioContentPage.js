@@ -6,9 +6,6 @@ import ImageGallery from "react-image-gallery";
 import { Typography } from "@material-ui/core";
 import PropTypes from "prop-types";
 
-// TO-DO: Finish the content page. The page should have a image/video gallery and rendering for the paragraphs prop.
-// TO-DO: When the content page is done, finish gathering/displaying media, and then remove construction messages here and in Portfolio.js.
-
 const useStyles = ( ) => ( {
 	bodyText: {
 		fontSize: 22,

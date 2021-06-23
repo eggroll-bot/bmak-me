@@ -8,6 +8,8 @@ import { Grid, Link, Typography } from "@material-ui/core";
 import PortfolioCard from "./PortfolioCard";
 import PropTypes from "prop-types";
 
+// TO-DO: Finish gathering/displaying media, re-order media so videos are first, finish content descriptions, and then remove construction messages here and in PortfolioContentPage.js.
+
 /*
 
 Portfolio Content Format:
