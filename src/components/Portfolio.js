@@ -18,6 +18,7 @@ name: string // Name of portfolio entry to display.
 media: string // The folder in src/media/portfolio/ containing the portfolio entry's media. Gallery displays alphabetically. Only MP4 videos are allowed.
 image: string // The name of the image file in src/media/portfolio/[media]/ to use as the image shown on the main portfolio page.
 cover: boolean // Whether the image should cover the entire space. Image may be cut off to have correct aspect ratio.
+gallery: boolean // Whether a gallery should be displayed on the portfolio content page.
 url: string // The part of the URL after portfolio/.
 paragraphs: array // An array of strings with each string being a paragraph in the portfolio content page.
 
@@ -29,6 +30,7 @@ const portfolioContent = [
 		media: "bmak_xyz",
 		image: "image1.jpg",
 		cover: true,
+		gallery: false,
 		url: "bmak-xyz",
 		paragraphs: [
 			"Testing",
@@ -40,6 +42,7 @@ const portfolioContent = [
 		media: "huffman_coding",
 		image: "image3.png",
 		cover: false,
+		gallery: true,
 		url: "huffman-coding",
 		paragraphs: [
 			"Testing",
@@ -51,6 +54,7 @@ const portfolioContent = [
 		media: "hamming_codes",
 		image: "image3.png",
 		cover: false,
+		gallery: true,
 		url: "hamming-codes",
 		paragraphs: [
 			"Testing",
@@ -62,6 +66,7 @@ const portfolioContent = [
 		media: "sorting_algorithms",
 		image: "image2.png",
 		cover: true,
+		gallery: true,
 		url: "sorting-algorithms",
 		paragraphs: [
 			"Testing",
@@ -73,6 +78,7 @@ const portfolioContent = [
 		media: "bmak_xyz", // TO-DO: Get media for this.
 		image: "image1.jpg",
 		cover: true,
+		gallery: false, // TO-DO: Set to true once media is obtained for this.
 		url: "easydental-vixwin-bridge",
 		paragraphs: [
 			"Testing",
@@ -84,6 +90,7 @@ const portfolioContent = [
 		media: "bmak_xyz", // TO-DO: Get media for this.
 		image: "image1.jpg",
 		cover: true,
+		gallery: false, // TO-DO: Set to true once media is obtained for this.
 		url: "vixwin-intraoral-camera-integration",
 		paragraphs: [
 			"Testing",
@@ -95,6 +102,7 @@ const portfolioContent = [
 		media: "auto_body_npc",
 		image: "image1.jpg",
 		cover: true,
+		gallery: true,
 		url: "auto-body-npc",
 		paragraphs: [
 			"Testing",
@@ -106,6 +114,7 @@ const portfolioContent = [
 		media: "anticrash",
 		image: "image1.jpg",
 		cover: true,
+		gallery: true,
 		url: "anticrash",
 		paragraphs: [
 			"Testing",
@@ -117,6 +126,7 @@ const portfolioContent = [
 		media: "anticheat",
 		image: "image1.jpg",
 		cover: true,
+		gallery: true,
 		url: "anticheat",
 		paragraphs: [
 			"Testing",
@@ -142,7 +152,7 @@ function Portfolio( props ) {
 			{ portfolioContent.map( ( item, index ) => (
 				<Route key={ index } path={ props.match.url + "/" + item.url }>
 					<BackButtonContext.Provider value={ props.match.url }>
-						<PortfolioContentPage media={ Object.values( portfolioMedia[ item.media ] ) } paragraphs={ item.paragraphs } title={ item.name } />
+						<PortfolioContentPage media={ item.gallery ? Object.values( portfolioMedia[ item.media ] ) : null } paragraphs={ item.paragraphs } title={ item.name } />
 					</BackButtonContext.Provider>
 				</Route>
 			) ) }

@@ -23,7 +23,7 @@ class PortfolioContentPage extends React.Component {
 	}
 
 	render( ) {
-		const media = this.props.media.map( ( item ) => {
+		const media = this.props.media?.map( ( item ) => {
 			const extension = item.match( /[^.]+$/ )[ 0 ];
 
 			if ( extension === "mp4" ) {
@@ -42,9 +42,12 @@ class PortfolioContentPage extends React.Component {
 				🚧 This page is under construction. 🚧
 				</Typography>
 
-				<div style={ { paddingBottom: "40px" } }>
-					<ImageGallery items={ media } showFullscreenButton={ false } showPlayButton={ false } showThumbnails={ false } />
-				</div>
+				{
+					this.props.media &&
+					<div style={ { paddingBottom: "40px" } }>
+						<ImageGallery items={ media } showFullscreenButton={ false } showPlayButton={ false } showThumbnails={ false } />
+					</div>
+				}
 
 				{ this.props.paragraphs.map( ( item, index ) => (
 					<Typography align="left" className={ this.props.classes.bodyText } key={ index } paragraph={ true }>
@@ -58,7 +61,7 @@ class PortfolioContentPage extends React.Component {
 
 PortfolioContentPage.propTypes = {
 	classes: PropTypes.object.isRequired,
-	media: PropTypes.array.isRequired,
+	media: PropTypes.array,
 	paragraphs: PropTypes.array.isRequired,
 	title: PropTypes.string.isRequired
 };
