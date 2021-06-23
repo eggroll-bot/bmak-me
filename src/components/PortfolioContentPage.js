@@ -18,7 +18,7 @@ const useStyles = ( ) => ( {
 class PortfolioContentPage extends React.Component {
 	_renderVideo( item ) {
 		return (
-			<video autoPlay loop muted height={ 450 } src={ item.original } />
+			<video autoPlay loop muted playsInline src={ item.original } style={ { backgroundColor: "#262626", height: "450px", maxWidth: "100%" } } />
 		);
 	}
 
