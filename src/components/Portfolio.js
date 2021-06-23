@@ -141,7 +141,7 @@ function Portfolio( props ) {
 			{ portfolioContent.map( ( item, index ) => (
 				<Route key={ index } path={ props.match.url + "/" + item.url }>
 					<BackButtonContext.Provider value={ props.match.url }>
-						<PortfolioContentPage paragraphs={ item.paragraphs } title={ item.name } />
+						<PortfolioContentPage media={ portfolioMedia[ item.media ] } paragraphs={ item.paragraphs } title={ item.name } />
 					</BackButtonContext.Provider>
 				</Route>
 			) ) }
