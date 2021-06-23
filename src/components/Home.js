@@ -19,11 +19,11 @@ function Home( ) {
 			</Box>
 
 			<Box mb={ 3 }>
-				<Typography align="center" gutterBottom={ true } style={ { fontWeight: 800 } } variant="h2">
+				<Typography gutterBottom align="center" style={ { fontWeight: 800 } } variant="h2">
 					👋 Hey, I&apos;m Brian.
 				</Typography>
 
-				<Typography align="center" gutterBottom={ true } variant="h4">
+				<Typography gutterBottom align="center" variant="h4">
 					Here is my&nbsp;
 
 					<Link href={ gitHubLink } rel="noopener noreferrer" style={ { color: "#FF845B" } } target="_blank">

@@ -18,7 +18,7 @@ const useStyles = ( ) => ( {
 class PortfolioContentPage extends React.Component {
 	_renderVideo( item ) {
 		return (
-			<video autoPlay={ true } height={ 450 } loop={ true } src={ item.original } />
+			<video autoPlay loop muted height={ 450 } src={ item.original } />
 		);
 	}
 
@@ -50,7 +50,7 @@ class PortfolioContentPage extends React.Component {
 				}
 
 				{ this.props.paragraphs.map( ( item, index ) => (
-					<Typography align="left" className={ this.props.classes.bodyText } key={ index } paragraph={ true }>
+					<Typography align="left" className={ this.props.classes.bodyText } key={ index }>
 						{ item }
 					</Typography>
 				) ) }
