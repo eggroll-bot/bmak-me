@@ -1550,7 +1550,7 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@npmcli/arborist@^2.3.0", "@npmcli/arborist@^2.5.0", "@npmcli/arborist@^2.6.3":
+"@npmcli/arborist@^2.3.0", "@npmcli/arborist@^2.5.0", "@npmcli/arborist@^2.6.4":
   version "2.6.4"
   resolved "https://registry.yarnpkg.com/@npmcli/arborist/-/arborist-2.6.4.tgz#bc413ae61dd57e23b8775a77c1f3199eea60b223"
   integrity sha512-A/pDQ/VZpdxaqsQS5XOWrhrPuC+ER7HLq+4ZkEmnO2yo/USFCWEsiUPYKhfY+sWXK3pgKjN7B7CEFmAnSoAt3g==
@@ -8641,14 +8641,15 @@ npm-user-validate@^1.0.1:
   resolved "https://registry.yarnpkg.com/npm-user-validate/-/npm-user-validate-1.0.1.tgz#31428fc5475fe8416023f178c0ab47935ad8c561"
   integrity sha512-uQwcd/tY+h1jnEaze6cdX/LrhWhoBxfSknxentoqmIuStxUExxjWd3ULMLFPiFUrZKbOVMowH6Jq2FRWfmhcEw==
 
-npm@7.18.1:
-  version "7.18.1"
-  resolved "https://registry.yarnpkg.com/npm/-/npm-7.18.1.tgz#9f5b74f567c64b9ce3ad8c4b6ecde5ce69137c98"
-  integrity sha512-fu7rMtc4ZaDnFlZsiLhqwWWs6KixOcBGiBLoJH+AbuaznwtT8mYQnq5nGNN14Jib+E9OjkjNRgg+X45Ia9xtKQ==
+npm@7.19.0:
+  version "7.19.0"
+  resolved "https://registry.yarnpkg.com/npm/-/npm-7.19.0.tgz#737ada34a20d2f72575b5b221900b6834ba71af6"
+  integrity sha512-bak/ZycWS8kalVFJ2m1JEo2pgvSwEDA9FMGthGnufAKciu4X4kpJMDZKe8VZKNaA/cXehd9XI7QdSZXmZauR8Q==
   dependencies:
-    "@npmcli/arborist" "^2.6.3"
+    "@npmcli/arborist" "^2.6.4"
     "@npmcli/ci-detect" "^1.2.0"
     "@npmcli/config" "^2.2.0"
+    "@npmcli/package-json" "^1.0.1"
     "@npmcli/run-script" "^1.8.5"
     abbrev "~1.1.1"
     ansicolors "~0.3.2"
@@ -13075,9 +13076,9 @@ yargs@^15.4.1:
     yargs-parser "^18.1.2"
 
 yarn-audit-fix@^6.3.2:
-  version "6.3.2"
-  resolved "https://registry.yarnpkg.com/yarn-audit-fix/-/yarn-audit-fix-6.3.2.tgz#319a3433aac6ad60d8f8c84439d71b604735eded"
-  integrity sha512-KK1MtLJQOzrP1sOj40aU/nqkabIPnMqpepri9dWfZj7WruZW60vaTUWzdXaN800BrBispKBpERxFslMD0ILmWg==
+  version "6.3.3"
+  resolved "https://registry.yarnpkg.com/yarn-audit-fix/-/yarn-audit-fix-6.3.3.tgz#08e518a2cc0a10cca96531a2321ee0f483c4bf3a"
+  integrity sha512-HZEVELGlc2xTRYr/JDLGccjPLCskobhFHNPeK0WV4u+MSXsUjEVaIsABnjz7rPIY51WHwnMuXq6QWDwITqbE0w==
   dependencies:
     "@types/find-cache-dir" "^3.2.0"
     "@types/fs-extra" "^9.0.11"
@@ -13091,7 +13092,7 @@ yarn-audit-fix@^6.3.2:
     fs-extra "^10.0.0"
     globby "^11.0.3"
     lodash "^4.17.21"
-    npm "7.18.1"
+    npm "7.19.0"
     pkg-dir "^5.0.0"
     semver "^7.3.5"
     synp "^1.9.7"
