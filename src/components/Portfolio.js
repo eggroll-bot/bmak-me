@@ -9,7 +9,6 @@ import PortfolioCard from "./PortfolioCard";
 import PropTypes from "prop-types";
 
 // TO-DO: Finish gathering/displaying media. Then, remove the construction message here and in PortfolioContentPage.js.
-// TO-DO: Add optional GitHub link to portfolio content pages.
 
 /*
 
