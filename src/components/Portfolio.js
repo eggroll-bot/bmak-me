@@ -7,8 +7,6 @@ import { Grid, Link, Typography } from "@material-ui/core";
 import PortfolioCard from "./PortfolioCard";
 import PropTypes from "prop-types";
 
-// TO-DO: Finish gathering/displaying media. Then, remove the construction message here and in PortfolioContentPage.js.
-
 /*
 
 Portfolio Content Format:
@@ -138,10 +136,10 @@ const portfolioContent = [
 	},
 	{
 		name: "🌉 Easy Dental VixWin Bridge",
-		media: "bmak_xyz", // TO-DO: Get media for this.
-		image: "image1.jpg",
+		media: "easydental_vixwin_bridge",
+		image: "image2.jpg",
 		cover: true,
-		gallery: false, // TO-DO: Set to true once media is obtained for this.
+		gallery: true,
 		url: "easydental-vixwin-bridge",
 		github: "https://github.com/eggroll-bot/easydental-vixwin-bridge",
 		paragraphs: [
@@ -171,10 +169,10 @@ const portfolioContent = [
 	},
 	{
 		name: "📷 VixWin Intraoral Camera Integration",
-		media: "bmak_xyz", // TO-DO: Get media for this.
+		media: "vixwin_intraoral",
 		image: "image1.jpg",
 		cover: true,
-		gallery: false, // TO-DO: Set to true once media is obtained for this.
+		gallery: true,
 		url: "vixwin-intraoral-camera-integration",
 		github: "https://github.com/eggroll-bot/vixwin-intraoral-camera-integration",
 		paragraphs: [
@@ -305,10 +303,6 @@ function Portfolio( props ) {
 
 			<Route path={ props.match.url }>
 				<InnerPage title="🤖 Portfolio">
-					<Typography align="center" style={ { paddingBottom: "40px" } } variant="h4">
-						🚧 This page is under construction. 🚧
-					</Typography>
-
 					<Typography align="center" style={ { paddingBottom: "40px" } } variant="h4">
 						My résumé can be found <Link color="secondary" href="/resume.pdf" target="_blank">here</Link>.
 					</Typography>
