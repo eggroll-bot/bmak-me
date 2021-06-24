@@ -201,7 +201,20 @@ const portfolioContent = [
 		gallery: true,
 		url: "auto-body-npc",
 		paragraphs: [
-			``
+			`
+			Project start date: December 2019
+			`,
+			`
+			This project was created to improve vehicle customization in a sandbox game called Garry's Mod. Garry's Mod is a game that has a singleplayer
+			mode and a multiplayer mode. The multiplayer mode consists of game servers hosted by independent server owners. This addon targets the
+			multiplayer mode.
+			`,
+			`
+			Garry's Mod has very little vehicle customization options by default in a roleplaying game server. This addon changes that by adding the
+			ability to upgrade engines, change the color of vehicles, change the skin of vehicles, change the bodygroups of vehicles (customize look
+			of certain parts), and add underglow to vehicles. Each upgrade costs a certain amount of in-game currency, of which the amount is configurable
+			by the game server owner.
+			`
 		]
 	},
 	{
@@ -212,7 +225,25 @@ const portfolioContent = [
 		gallery: true,
 		url: "anticrash",
 		paragraphs: [
-			``
+			`
+			Project start date: August 2018
+			`,
+			`
+			This project was created to reduce server lag and the number of server crashes in a sandbox game called Garry's Mod. Garry's Mod is a game
+			that has a singleplayer mode and a multiplayer mode. The multiplayer mode consists of game servers hosted by independent server owners.
+			This addon targets the multiplayer mode.
+			`,
+			`
+			Garry's Mod servers are very prone to crashes. The majority of server crashes are caused by spawning too many items (prop spam). Prop spam
+			causes lags and sometimes crashes a server when there are too many physics calculations for the server to handle. Sometimes, prop spam is
+			accidental, and other times it is done intentionally by bad actors.
+			`,
+			`
+			This addon aims to reduce the number of server crashes by preventing these collisions from occuring in the first place. When props are
+			unfrozen, this addon will prevent the prop from colliding with other props. When props are frozen, the addon will restore the ability to
+			collide with other props. Trusted players can be given a certain tag that will allow them to bypass this, in case it poses an inconvenience
+			to them when building structures.
+			`
 		]
 	},
 	{
@@ -223,7 +254,8 @@ const portfolioContent = [
 		gallery: true,
 		url: "anticheat",
 		paragraphs: [
-			``
+			`
+			`
 		]
 	}
 ];
