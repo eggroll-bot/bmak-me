@@ -2,8 +2,9 @@ import React from "react";
 import "./PortfolioContentPage.css";
 import { withStyles } from "@material-ui/core/styles";
 import InnerPage from "./InnerPage";
+import { Button, Typography } from "@material-ui/core";
+import { GitHub as GitHubIcon } from "@material-ui/icons";
 import ImageGallery from "react-image-gallery";
-import { Typography } from "@material-ui/core";
 import PropTypes from "prop-types";
 
 const useStyles = ( ) => ( {
@@ -43,6 +44,15 @@ class PortfolioContentPage extends React.Component {
 				</Typography>
 
 				{
+					this.props.github &&
+					<div style={ { paddingBottom: "40px", textAlign: "center" } }>
+						<Button color="primary" href={ this.props.github } rel="noopener noreferrer" size="medium" startIcon={ <GitHubIcon /> } target="_blank" variant="outlined">
+							Visit GitHub Repository
+						</Button>
+					</div>
+				}
+
+				{
 					this.props.media &&
 					<div style={ { paddingBottom: "40px" } }>
 						<ImageGallery items={ media } showFullscreenButton={ false } showPlayButton={ false } showThumbnails={ false } />
@@ -61,6 +71,7 @@ class PortfolioContentPage extends React.Component {
 
 PortfolioContentPage.propTypes = {
 	classes: PropTypes.object.isRequired,
+	github: PropTypes.string,
 	media: PropTypes.array,
 	paragraphs: PropTypes.array.isRequired,
 	title: PropTypes.string.isRequired

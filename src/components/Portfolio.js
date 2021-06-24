@@ -21,6 +21,7 @@ image: string // The name of the image file in src/media/portfolio/[media]/ to u
 cover: boolean // Whether the image should cover the entire space. Image may be cut off to have correct aspect ratio.
 gallery: boolean // Whether a gallery should be displayed on the portfolio content page.
 url: string // The part of the URL after portfolio/.
+github: string // A link to the GitHub repository for the project (optional).
 paragraphs: array // An array of strings with each string being a paragraph in the portfolio content page.
 
 */
@@ -33,6 +34,7 @@ const portfolioContent = [
 		cover: true,
 		gallery: false,
 		url: "bmak-xyz",
+		github: "https://github.com/eggroll-bot/personal-website",
 		paragraphs: [
 			`
 			Project start date: June 2021
@@ -55,6 +57,7 @@ const portfolioContent = [
 		cover: false,
 		gallery: true,
 		url: "huffman-coding",
+		github: "https://github.com/eggroll-bot/huffman-coding",
 		paragraphs: [
 			`
 			Project start date: May 2021
@@ -88,6 +91,7 @@ const portfolioContent = [
 		cover: false,
 		gallery: true,
 		url: "hamming-codes",
+		github: "https://github.com/eggroll-bot/hamming-codes",
 		paragraphs: [
 			`
 			Project start date: May 2021
@@ -117,6 +121,7 @@ const portfolioContent = [
 		cover: true,
 		gallery: true,
 		url: "sorting-algorithms",
+		github: "https://github.com/eggroll-bot/sorting-algorithms",
 		paragraphs: [
 			`
 			Project start date: April 2021
@@ -140,6 +145,7 @@ const portfolioContent = [
 		cover: true,
 		gallery: false, // TO-DO: Set to true once media is obtained for this.
 		url: "easydental-vixwin-bridge",
+		github: "https://github.com/eggroll-bot/easydental-vixwin-bridge",
 		paragraphs: [
 			`
 			Project start date: December 2020
@@ -172,6 +178,7 @@ const portfolioContent = [
 		cover: true,
 		gallery: false, // TO-DO: Set to true once media is obtained for this.
 		url: "vixwin-intraoral-camera-integration",
+		github: "https://github.com/eggroll-bot/vixwin-intraoral-camera-integration",
 		paragraphs: [
 			`
 			Project start date: November 2020
@@ -200,6 +207,7 @@ const portfolioContent = [
 		cover: true,
 		gallery: true,
 		url: "auto-body-npc",
+		github: "https://github.com/eggroll-bot/auto-body-npc",
 		paragraphs: [
 			`
 			Project start date: December 2019
@@ -292,7 +300,7 @@ function Portfolio( props ) {
 			{ portfolioContent.map( ( item, index ) => (
 				<Route key={ index } path={ props.match.url + "/" + item.url }>
 					<BackButtonContext.Provider value={ props.match.url }>
-						<PortfolioContentPage media={ item.gallery ? Object.values( portfolioMedia[ item.media ] ) : null } paragraphs={ item.paragraphs } title={ item.name } />
+						<PortfolioContentPage github={ item.github } media={ item.gallery ? Object.values( portfolioMedia[ item.media ] ) : null } paragraphs={ item.paragraphs } title={ item.name } />
 					</BackButtonContext.Provider>
 				</Route>
 			) ) }
