@@ -1,7 +1,9 @@
 import React from "react";
 import "./App.css";
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
-import { HashRouter, Route } from "react-router-dom";
+import { createHashHistory } from "history";
+import { wrapHistory } from "oaf-react-router";
+import { Router, Route } from "react-router-dom";
 import { CssBaseline } from "@material-ui/core";
 import FadeSwitch from "./components/FadeSwitch";
 import Home from "./components/Home";
@@ -50,11 +52,16 @@ const theme = createMuiTheme( {
 	}
 } );
 
-// TO-DO: Add scrolling restoration. See https://github.com/trevorr/react-scroll-manager. Package is already installed.
+const wrapSettings = {
+	restorePageStateOnPop: false
+};
 
 function App( ) {
+	const history = createHashHistory( );
+	wrapHistory( history, wrapSettings );
+
 	return (
-		<HashRouter>
+		<Router history={ history }>
 			<MuiThemeProvider theme={ theme }>
 				<CssBaseline />
 
@@ -64,7 +71,7 @@ function App( ) {
 					<Route component={ Home } path="/" />
 				</FadeSwitch>
 			</MuiThemeProvider>
-		</HashRouter>
+		</Router>
 	);
 }
 

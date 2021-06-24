@@ -1,6 +1,5 @@
 import React from "react";
-import FadeSwitch from "./FadeSwitch";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import BackButtonContext from "../contexts/back-button-context";
 import PortfolioContentPage from "./PortfolioContentPage";
 import InnerPage from "./InnerPage";
@@ -295,7 +294,7 @@ context.keys( ).forEach( ( filePath ) => {
 
 function Portfolio( props ) {
 	return (
-		<FadeSwitch>
+		<Switch>
 			{ portfolioContent.map( ( item, index ) => (
 				<Route key={ index } path={ props.match.url + "/" + item.url }>
 					<BackButtonContext.Provider value={ props.match.url }>
@@ -323,7 +322,7 @@ function Portfolio( props ) {
 					</Grid>
 				</InnerPage>
 			</Route>
-		</FadeSwitch>
+		</Switch>
 	);
 }
 
