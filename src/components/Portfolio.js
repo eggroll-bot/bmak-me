@@ -8,7 +8,7 @@ import { Grid, Link, Typography } from "@material-ui/core";
 import PortfolioCard from "./PortfolioCard";
 import PropTypes from "prop-types";
 
-// TO-DO: Finish gathering/displaying media and finish content descriptions. Then, remove the construction message here and in PortfolioContentPage.js.
+// TO-DO: Finish gathering/displaying media. Then, remove the construction message here and in PortfolioContentPage.js.
 // TO-DO: Add optional GitHub link to portfolio content pages.
 
 /*
@@ -218,6 +218,33 @@ const portfolioContent = [
 		]
 	},
 	{
+		name: "🚫 Garry's Mod - Anticheat",
+		media: "anticheat",
+		image: "image1.jpg",
+		cover: true,
+		gallery: true,
+		url: "anticheat",
+		paragraphs: [
+			`
+			Project start date: November 2017
+			`,
+			`
+			This project was created to prevent cheating in a sandbox game called Garry's Mod. Garry's Mod is a game that has a singleplayer mode and
+			a multiplayer mode. The multiplayer mode consists of game servers hosted by independent server owners. This addon targets the multiplayer
+			mode.
+			`,
+			`
+			Garry's Mod servers tend to have quite a few cheaters, specifically those with aimbot (automatic aiming at targets), x-ray (seeing through
+			barriers), etc. This addon aims to prevent cheating on servers. For this addon, I created a rudimentary obfuscator that obfuscates Lua
+			code. The obfuscator is used on the clientside portion of the anticheat because the clientside portion of addons gets sent to the player.
+			`,
+			`
+			Not obfuscating the clientside portion of the anticheat creates a risk of someone reverse-engineering the anticheat and finding out how to
+			bypass it. Although the obfuscator I created was not that advanced, it was sufficient to prevent most people from reverse-engineering it.
+			`
+		]
+	},
+	{
 		name: "💥 Garry's Mod - Anticrash",
 		media: "anticrash",
 		image: "image1.jpg",
@@ -226,7 +253,7 @@ const portfolioContent = [
 		url: "anticrash",
 		paragraphs: [
 			`
-			Project start date: August 2018
+			Project start date: August 2017
 			`,
 			`
 			This project was created to reduce server lag and the number of server crashes in a sandbox game called Garry's Mod. Garry's Mod is a game
@@ -243,18 +270,6 @@ const portfolioContent = [
 			unfrozen, this addon will prevent the prop from colliding with other props. When props are frozen, the addon will restore the ability to
 			collide with other props. Trusted players can be given a certain tag that will allow them to bypass this, in case it poses an inconvenience
 			to them when building structures.
-			`
-		]
-	},
-	{
-		name: "🚫 Garry's Mod - Anticheat",
-		media: "anticheat",
-		image: "image1.jpg",
-		cover: true,
-		gallery: true,
-		url: "anticheat",
-		paragraphs: [
-			`
 			`
 		]
 	}
