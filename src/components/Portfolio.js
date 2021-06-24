@@ -8,7 +8,8 @@ import { Grid, Link, Typography } from "@material-ui/core";
 import PortfolioCard from "./PortfolioCard";
 import PropTypes from "prop-types";
 
-// TO-DO: Finish gathering/displaying media, re-order media so videos are first, finish content descriptions, and then remove construction messages here and in PortfolioContentPage.js.
+// TO-DO: Finish gathering/displaying media and finish content descriptions. Then, remove the construction message here and in PortfolioContentPage.js.
+// TO-DO: Add optional GitHub link to portfolio content pages.
 
 /*
 
@@ -33,8 +34,18 @@ const portfolioContent = [
 		gallery: false,
 		url: "bmak-xyz",
 		paragraphs: [
-			"Testing",
-			"123"
+			`
+			Project start date: June 2021
+			`,
+			`
+			This website is my first project created with React. When I started this project, I hadn't used JavaScript in about 4 years, so I had to
+			practically re-learn the language, in addition to learning React's features. Learning the basics of React wasn't that difficult because
+			the documentation for React is fairly detailed. I used the Material-UI library for most of the components in this website. Material-UI
+			also has detailed documentation, so that made it easy to learn.
+			`,
+			`
+			Overall, I'm fairly happy with how this website turned out. I will definitely be creating more React projects down the line.
+			`
 		]
 	},
 	{
@@ -45,8 +56,29 @@ const portfolioContent = [
 		gallery: true,
 		url: "huffman-coding",
 		paragraphs: [
-			"Testing",
-			"123"
+			`
+			Project start date: May 2021
+			`,
+			`
+			This project was originally created for a Computer Systems and C Programming class (CSE 13S) at UC Santa Cruz, and has since been improved.
+			For this project, I created a Huffman encoder and decoder. The encoder and decoder programs read from and write to stdin and stdout by
+			default, but alternatively, they can also read from and write to files specified by command-line arguments.
+			`,
+			`
+			The encoded file format contains a file header, a post-order Huffman tree dump, and codes for each of the symbols present in the original
+			file. The file header contains a magic number, the size of the Huffman tree dump, and the size of the original file. The file header is
+			always read and written in little-endian byte ordering, so it is safe to use across architectures with different endiannesses.
+			`,
+			`
+			The Huffman encoder and decoder uses the read( ) and write( ) system calls to perform reads and writes. The encoder uses a priority queue
+			ADT to construct a Huffman tree and the decoder uses a stack ADT to rebuild the Huffman tree from the dump in the encoded output.
+			`,
+			`
+			Implementing the priority queue ADT was a good learning experience because it was the first time I had implemented one. I originally was
+			going to use a min-heap to implement it, but I figured that it would probably be more complicated than inserting into an ordered array.
+			Given that the priority queue would only contain a maximum of 256 elements (one for each ASCII character), the implementation method I
+			chose for the priority queue would not make a significant performance difference.
+			`
 		]
 	},
 	{
@@ -57,8 +89,25 @@ const portfolioContent = [
 		gallery: true,
 		url: "hamming-codes",
 		paragraphs: [
-			"Testing",
-			"123"
+			`
+			Project start date: May 2021
+			`,
+			`
+			This project was originally created for a Computer Systems and C Programming class (CSE 13S) at UC Santa Cruz, and has since been improved.
+			For this project, I created two Hamming encoders and decoders. The encoder and decoder programs read from and write to stdin and stdout by
+			default, but alternatively, they can also read from and write to files specified by command-line arguments.
+			`,
+			`
+			The first Hamming encoder and decoder uses matrix multiplication to encode and decode Hamming codes. This Hamming encoder and decoder requires
+			the use of the bit vector and bit matrix ADT, and also uses memoization to speed up encoding and decoding. The second Hamming encoder and
+			decoder uses lookup tables to encode and decode Hamming codes. The lookup tables used were generated using the matrix multiplication Hamming
+			encoder and decoder.
+			`,
+			`
+			The encoders will read one byte at a time, and outputs two Hamming(8, 4) codes for each byte read. The decoders will read two bytes at a
+			time, and outputs the decoded byte. If a correctable error is found, the error will be corrected before the byte is outputted. If an
+			uncorrectable error is found, a null character will be outputted. Statistics for errors found can be viewed with a flag in the decoders.
+			`
 		]
 	},
 	{
@@ -69,8 +118,19 @@ const portfolioContent = [
 		gallery: true,
 		url: "sorting-algorithms",
 		paragraphs: [
-			"Testing",
-			"123"
+			`
+			Project start date: April 2021
+			`,
+			`
+			This project was originally created for a Computer Systems and C Programming class (CSE 13S) at UC Santa Cruz, and has since been improved.
+			For this project, I created a program that compares statistics of various sorting algorithms. Right now, the program is able to run bubble
+			sort, shell sort with the Ciura gap sequence, shell sort with the Pratt gap sequence, recursive quicksort, quicksort with a stack, and
+			quicksort with a queue.
+			`,
+			`
+			This program runs sorting algorithms as directed by command-line arguments and outputs the sorted array as well as the number of elements
+			sorted, number of moves performed, number of compares performed, and the max stack/queue size for the quicksort stack/queue implementations.
+			`
 		]
 	},
 	{
@@ -81,8 +141,28 @@ const portfolioContent = [
 		gallery: false, // TO-DO: Set to true once media is obtained for this.
 		url: "easydental-vixwin-bridge",
 		paragraphs: [
-			"Testing",
-			"123"
+			`
+			Project start date: December 2020
+			`,
+			`
+			This project was created to bridge the Easy Dental practice management software and VixWin, a dental imaging program. VixWin ships with
+			a bridge called VxLink that bridges Easy Dental and VixWin, but the bridge is very buggy and crashes a lot. This project was created to
+			replace that bridge.
+			`,
+			`
+			Right now, the program has the same workflow as VxLink. The program should be opened on startup, and will remain in the tray. When the tray
+			icon is clicked, the program will grab the currently selected patient in Easy Dental and launches VixWin with the correct patient.
+			`,
+			`
+			Internally, when the tray icon is clicked, the program will query the registry to find the patient ID of the currently selected patient.
+			From there, once it has the patient ID, it will query the Easy Dental database using the ODBC interface exposed by the database. This is
+			done to retrieve the first name, middle initial, and last name of the patient, which will be displayed inside of VixWin. After the full
+			name is retrieved, VixWin will be launched with the appropriate flags to open the correct patient.
+			`,
+			`
+			Figuring out the internal workings of Easy Dental and VixWin for this project was not an easy task and ended up taking quite a bit of time
+			to figure out because there is no public technical documentation for these two programs.
+			`
 		]
 	},
 	{
@@ -93,8 +173,24 @@ const portfolioContent = [
 		gallery: false, // TO-DO: Set to true once media is obtained for this.
 		url: "vixwin-intraoral-camera-integration",
 		paragraphs: [
-			"Testing",
-			"123"
+			`
+			Project start date: November 2020
+			`,
+			`
+			This project was created to allow for the use of intraoral cameras with VixWin, a dental imaging program. VixWin ships with the AMCap program,
+			which allows intraoral cameras to be used with VixWin, but the program freezes and crashes often. In addition, it has no support for physical
+			shutter buttons. This project was created to replace that program.
+			`,
+			`
+			When the program is opened, a tray icon and a window will appear. The tray icon's menu can be used to configure which video device to use.
+			The video device's moniker string (unique identifier) is stored into a file, so the selected device saves across sessions. The window that
+			appears shows a preview of the selected video device and also has a capture button. If the capture button is clicked, the image is saved
+			in the VixWin database. If the video device has a shutter button, that can be used to capture as well.
+			`,
+			`
+			Figuring out how VixWin worked internally to get this done was somewhat challenging because there is no public technical documentation for
+			the program, but in the end, I was able to figure out how it worked and it seems to work fairly well.
+			`
 		]
 	},
 	{
@@ -105,8 +201,7 @@ const portfolioContent = [
 		gallery: true,
 		url: "auto-body-npc",
 		paragraphs: [
-			"Testing",
-			"123"
+			``
 		]
 	},
 	{
@@ -117,8 +212,7 @@ const portfolioContent = [
 		gallery: true,
 		url: "anticrash",
 		paragraphs: [
-			"Testing",
-			"123"
+			``
 		]
 	},
 	{
@@ -129,8 +223,7 @@ const portfolioContent = [
 		gallery: true,
 		url: "anticheat",
 		paragraphs: [
-			"Testing",
-			"123"
+			``
 		]
 	}
 ];
