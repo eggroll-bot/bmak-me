@@ -1,7 +1,7 @@
 import React from "react";
 import { withStyles } from "@material-ui/styles";
-import { useHistory } from "react-router-dom";
 import { Card, CardActionArea, CardContent, CardMedia, Typography } from "@material-ui/core";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const CardMediaImageCover = withStyles( {
@@ -11,24 +11,24 @@ const CardMediaImageCover = withStyles( {
 } )( CardMedia );
 
 function PortfolioCard( props ) {
-	const history = useHistory( );
-
 	return (
-		<Card variant="outlined">
-			<CardActionArea disableTouchRipple onClick={ ( ) => { history.push( props.path ); } }>
-				{
-					props.cover ?
-						<CardMediaImageCover component="img" src={ props.image } style={ { height: props.height || "100%", width: props.width || "100%" } } /> :
-						<CardMedia component="img" src={ props.image } style={ { height: props.height || "100%", width: props.width || "100%" } } />
-				}
+		<Link style={ { textDecoration: "none" } } to={ props.path }>
+			<Card variant="outlined">
+				<CardActionArea disableTouchRipple>
+					{
+						props.cover ?
+							<CardMediaImageCover component="img" src={ props.image } style={ { height: props.height || "100%", width: props.width || "100%" } } /> :
+							<CardMedia component="img" src={ props.image } style={ { height: props.height || "100%", width: props.width || "100%" } } />
+					}
 
-				<CardContent>
-					<Typography align="center">
-						{ props.text }
-					</Typography>
-				</CardContent>
-			</CardActionArea>
-		</Card>
+					<CardContent>
+						<Typography align="center">
+							{ props.text }
+						</Typography>
+					</CardContent>
+				</CardActionArea>
+			</Card>
+		</Link>
 	);
 }
 

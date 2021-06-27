@@ -1,16 +1,15 @@
 import React from "react";
 import "./Home.css";
-import { useHistory } from "react-router-dom";
 import { Avatar, Box, Button, Grid, Link, Typography } from "@material-ui/core";
 import pfpImage from "../media/pfp.png";
 import { Code as CodeIcon, GitHub as GitHubIcon, Info as InfoIcon, LinkedIn as LinkedInIcon } from "@material-ui/icons";
+import { Link as RouterLink } from "react-router-dom";
 
 const gitHubLink = "https://github.com/eggroll-bot";
 const linkedInLink = "https://www.linkedin.com/in/brian-mak/";
 
 function Home( ) {
 	document.title = "🏠 Home";
-	const history = useHistory( );
 
 	return (
 		<div className="Home">
@@ -42,15 +41,19 @@ function Home( ) {
 
 			<Grid container justify="center" spacing={ 5 }>
 				<Grid item>
-					<Button color="primary" onClick={ ( ) => { history.push( "/about-me" ); } } size="medium" startIcon={ <InfoIcon /> } variant="outlined">
-						About Me
-					</Button>
+					<RouterLink style={ { textDecoration: "none" } } to="/about-me">
+						<Button color="primary" size="medium" startIcon={ <InfoIcon /> } variant="outlined">
+							About Me
+						</Button>
+					</RouterLink>
 				</Grid>
 
 				<Grid item>
-					<Button color="primary" onClick={ ( ) => { history.push( "/portfolio" ); } } size="medium" startIcon={ <CodeIcon /> } variant="outlined">
-						Portfolio
-					</Button>
+					<RouterLink style={ { textDecoration: "none" } } to="/portfolio">
+						<Button color="primary" size="medium" startIcon={ <CodeIcon /> } variant="outlined">
+							Portfolio
+						</Button>
+					</RouterLink>
 				</Grid>
 			</Grid>
 		</div>
