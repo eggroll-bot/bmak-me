@@ -24,6 +24,37 @@ paragraphs: array // An array of strings with each string being a paragraph in t
 
 const portfolioContent = [
 	{
+		name: "🧮 Programmer's Calculator",
+		media: "programmers_calculator",
+		image: "image1.png",
+		cover: false,
+		gallery: true,
+		url: "programmers-calculator",
+		github: "https://github.com/eggroll-bot/programmers-calculator",
+		paragraphs: [
+			`
+			Project start date: June 2021
+			`,
+			`
+			This project is a calculator that contains features specifically designed for programmers, such as bitwise shifts, bitwise rotations, and
+			base conversions.
+			`,
+			`
+			Internally, it uses a modified version of the shunting-yard algorithm to perform calculations. The modifications allow for it to support unary
+			operators, and left-to-right associativity or right-to-left associativity. In addition, instead of converting to reverse Polish notation and
+			then evaluating, the program will begin to perform intermediate calculations as it encounters them.
+			`,
+			`
+			This project was created using React and Electron. For the UI components in the calculator, I used the Material-UI library.
+			`,
+			<>
+				There is also a web version available&nbsp;
+				<Link color="secondary" href="https://progcalc.bmak.xyz/" target="_blank">here</Link>
+				; however, due to the use of BigInt, it may not work in older browsers or browsers that do not support the use of BigInt.
+			</>
+		]
+	},
+	{
 		name: "🌐 bmak.xyz",
 		media: "bmak_xyz",
 		image: "image1.jpg",
@@ -37,9 +68,9 @@ const portfolioContent = [
 			`,
 			`
 			This website is my first project created with React. When I started this project, I hadn't used JavaScript in about 4 years, so I had to
-			practically re-learn the language, in addition to learning React's features. Learning the basics of React wasn't that difficult because
-			the documentation for React is fairly detailed. I used the Material-UI library for most of the components in this website. Material-UI
-			also has detailed documentation, so that made it easy to learn.
+			practically re-learn the language, in addition to learning React's features. Learning the basics of React wasn't that difficult because the
+			documentation for React is fairly detailed. I used the Material-UI library for the UI components in this website. Material-UI also has
+			detailed documentation, so that made it easy to learn.
 			`,
 			`
 			Overall, I'm fairly happy with how this website turned out. I will definitely be creating more React projects down the line.
