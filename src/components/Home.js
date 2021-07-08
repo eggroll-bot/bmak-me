@@ -39,7 +39,7 @@ function Home( ) {
 				</Typography>
 			</Box>
 
-			<Grid container justify="center" spacing={ 5 }>
+			<Grid container justifyContent="center" spacing={ 5 }>
 				<Grid item>
 					<RouterLink style={ { textDecoration: "none" } } to="/about-me">
 						<Button color="primary" size="medium" startIcon={ <InfoIcon /> } variant="outlined">

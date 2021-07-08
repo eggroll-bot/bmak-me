@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
+import { createTheme, MuiThemeProvider } from "@material-ui/core/styles";
 import { createHashHistory } from "history";
 import { wrapHistory } from "oaf-react-router";
 import { Router, Route } from "react-router-dom";
@@ -10,7 +10,7 @@ import Home from "./components/Home";
 import AboutMe from "./components/AboutMe";
 import Portfolio from "./components/Portfolio";
 
-const theme = createMuiTheme( {
+const theme = createTheme( {
 	palette: {
 		background: {
 			default: "#1A1A1A",

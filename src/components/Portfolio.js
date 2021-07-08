@@ -338,7 +338,7 @@ function Portfolio( props ) {
 						My résumé can be found <Link color="secondary" href="/resume.pdf" target="_blank">here</Link>.
 					</Typography>
 
-					<Grid container justify="center" spacing={ 2 }>
+					<Grid container justifyContent="center" spacing={ 2 }>
 						{ portfolioContent.map( ( item, index ) => (
 							<Grid item key={ index } style={ { width: 512 } }>
 								<PortfolioCard cover={ item.cover } height="288px" image={ portfolioMedia[ item.media ][ item.image ] } path={ props.match.url + "/" + item.url } text={ item.name } />
