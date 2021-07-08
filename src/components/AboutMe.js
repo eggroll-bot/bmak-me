@@ -20,19 +20,18 @@ function AboutMe( ) {
 		`
 		Hello! Welcome to my website. I'm Brian Mak. I'm a student at the University of California, Santa Cruz majoring in computer science with plans
 		to minor in technology and information management. I like to create open-source side projects in my free time, and have an interest in software
-		development and system administration.
+		development.
+		`,
+		`
+		I also like to learn about and try out new technologies. Currently, I'm learning React. This website is my first project built in React. You can
+		check out my most recent projects in my portfolio linked below.
 		`,
 		`
 		In the short term, before I get my bachelor's degree, I'm looking to land a software engineering internship. After I get my degree, I am
-		considering either working in the software engineering industry or pursuing a master's degree in computer science.
-		`,
-		`
-		During the academic year, I am seeking tutoring positions for computer science courses. During my first year at UC Santa Cruz, I tutored for a
-		computer systems and assembly language course. Tutoring for that course turned out to be quite rewarding and it helped me further develop my
-		communication and problem-solving skills. I hope to take these skills with me down whichever path I decide to take in the future.
+		considering either finding work in the software engineering industry or pursuing a master's degree in computer science.
 		`,
 		<>
-			Wanna know what I&apos;ve been up to recently? Feel free to check out my portfolio. My portfolio and résumé can be found&nbsp;
+			Wanna see what I&apos;ve been up to recently? Feel free to check out my portfolio. My portfolio and résumé can be found&nbsp;
 			<RouterLink to="/portfolio">here</RouterLink>
 			.
 		</>,
