@@ -1,9 +1,10 @@
 import React from "react";
 import "./App.css";
 import { createTheme, MuiThemeProvider } from "@material-ui/core/styles";
-import { createHashHistory } from "history";
+import { createBrowserHistory } from "history";
 import { wrapHistory } from "oaf-react-router";
 import { Router, Route } from "react-router-dom";
+import { CompatRouter } from "react-router-dom-v5-compat";
 import { CssBaseline } from "@material-ui/core";
 import FadeSwitch from "./components/FadeSwitch";
 import Home from "./components/Home";
@@ -57,20 +58,22 @@ const wrapSettings = {
 };
 
 function App( ) {
-	const history = createHashHistory( );
+	const history = createBrowserHistory( );
 	wrapHistory( history, wrapSettings );
 
 	return (
 		<Router history={ history }>
-			<MuiThemeProvider theme={ theme }>
-				<CssBaseline />
+			<CompatRouter>
+				<MuiThemeProvider theme={ theme }>
+					<CssBaseline />
 
-				<FadeSwitch>
-					<Route component={ AboutMe } path="/about-me" />
-					<Route component={ Portfolio } path="/portfolio" />
-					<Route component={ Home } path="/" />
-				</FadeSwitch>
-			</MuiThemeProvider>
+					<FadeSwitch>
+						<Route component={ AboutMe } path="/about-me" />
+						<Route component={ Portfolio } path="/portfolio" />
+						<Route component={ Home } path="/" />
+					</FadeSwitch>
+				</MuiThemeProvider>
+			</CompatRouter>
 		</Router>
 	);
 }

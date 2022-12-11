@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Routes, Route } from "react-router-dom-v5-compat";
 import BackButtonContext from "../contexts/back-button-context";
 import PortfolioContentPage from "./PortfolioContentPage";
 import InnerPage from "./InnerPage";
@@ -318,36 +318,41 @@ context.keys( ).forEach( ( filePath ) => {
 	const mediaDirectoryName = pathMatches[ 0 ];
 	const mediaFileName = pathMatches[ 1 ];
 	portfolioMedia[ mediaDirectoryName ] = portfolioMedia[ mediaDirectoryName ] || { }; // Create array if it doesn't exist.
-	portfolioMedia[ mediaDirectoryName ][ mediaFileName ] = context( filePath ).default;
+	portfolioMedia[ mediaDirectoryName ][ mediaFileName ] = context( filePath );
 } );
 
 function Portfolio( props ) {
 	return (
-		<Switch>
+		<Routes>
 			{ portfolioContent.map( ( item, index ) => (
-				<Route key={ index } path={ props.match.url + "/" + item.url }>
-					<BackButtonContext.Provider value={ props.match.url }>
-						<PortfolioContentPage github={ item.github } media={ item.gallery ? Object.values( portfolioMedia[ item.media ] ) : null } paragraphs={ item.paragraphs } title={ item.name } />
-					</BackButtonContext.Provider>
-				</Route>
+				<Route
+					element={
+						<BackButtonContext.Provider value={ props.match.url }>
+							<PortfolioContentPage github={ item.github } media={ item.gallery ? Object.values( portfolioMedia[ item.media ] ) : null } paragraphs={ item.paragraphs } title={ item.name } />
+						</BackButtonContext.Provider>
+					}
+					key={ index }
+					path={ props.match.url + "/" + item.url } />
 			) ) }
 
-			<Route path={ props.match.url }>
-				<InnerPage title="🤖 Portfolio">
-					<Typography align="center" style={ { paddingBottom: "40px" } } variant="h4">
+			<Route
+				element={
+					<InnerPage title="🤖 Portfolio">
+						<Typography align="center" style={ { paddingBottom: "40px" } } variant="h4">
 						My résumé can be found <Link color="secondary" href="/resume.pdf" target="_blank">here</Link>.
-					</Typography>
+						</Typography>
 
-					<Grid container justifyContent="center" spacing={ 2 }>
-						{ portfolioContent.map( ( item, index ) => (
-							<Grid item key={ index } style={ { width: 512 } }>
-								<PortfolioCard cover={ item.cover } height="288px" image={ portfolioMedia[ item.media ][ item.image ] } path={ props.match.url + "/" + item.url } text={ item.name } />
-							</Grid>
-						) ) }
-					</Grid>
-				</InnerPage>
-			</Route>
-		</Switch>
+						<Grid container justifyContent="center" spacing={ 2 }>
+							{ portfolioContent.map( ( item, index ) => (
+								<Grid item key={ index } style={ { width: 512 } }>
+									<PortfolioCard cover={ item.cover } height="288px" image={ portfolioMedia[ item.media ][ item.image ] } path={ props.match.url + "/" + item.url } text={ item.name } />
+								</Grid>
+							) ) }
+						</Grid>
+					</InnerPage>
+				}
+				path={ props.match.url } />
+		</Routes>
 	);
 }
 
