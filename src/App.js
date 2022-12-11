@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { createTheme, ThemeProvider, StyledEngineProvider, adaptV4Theme } from "@mui/material/styles";
+import { createTheme, ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
 import { createBrowserHistory } from "history";
 import { wrapHistory } from "oaf-react-router";
 import { Router, Route } from "react-router-dom";
@@ -11,7 +11,7 @@ import Home from "./components/Home";
 import AboutMe from "./components/AboutMe";
 import Portfolio from "./components/Portfolio";
 
-const theme = createTheme( adaptV4Theme( {
+const theme = createTheme( {
 	palette: {
 		background: {
 			default: "#1A1A1A",
@@ -23,41 +23,47 @@ const theme = createTheme( adaptV4Theme( {
 		secondary: {
 			main: "#FF9B48"
 		},
-		type: "dark"
+		mode: "dark"
 	},
-	props: {
+	components: {
+		MuiAvatar: {
+			styleOverrides: {
+				root: {
+					height: "100px",
+					width: "100px"
+				}
+			}
+		},
+		MuiCardContent: {
+			styleOverrides: {
+				root: {
+					backgroundColor: "#262626"
+				}
+			}
+		},
+		MuiCardMedia: {
+			styleOverrides: {
+				img: {
+					objectFit: "contain"
+				}
+			}
+		},
 		MuiLink: {
-			target: "_blank",
-			underline: "hover"
+			defaultProps: {
+				target: "_blank",
+				underline: "hover"
+			},
+			styleOverrides: {
+				underlineHover: {
+					textDecoration: "underline solid transparent" // To allow for smooth link hovering.
+				}
+			}
 		}
 	},
 	typography: {
 		fontFamily: "\"Raleway\", sans-serif"
-	},
-	overrides: {
-		MuiAvatar: {
-			root: {
-				height: "100px",
-				width: "100px"
-			}
-		},
-		MuiCardContent: {
-			root: {
-				backgroundColor: "#262626"
-			}
-		},
-		MuiCardMedia: {
-			img: {
-				objectFit: "contain"
-			}
-		},
-		MuiLink: {
-			underlineHover: {
-				textDecoration: "underline solid transparent" // To allow for smooth link hovering.
-			}
-		}
 	}
-} ) );
+} );
 
 const wrapSettings = {
 	restorePageStateOnPop: false
