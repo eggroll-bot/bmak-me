@@ -1,7 +1,7 @@
 import React from "react";
-import { withStyles } from "@material-ui/styles";
-import { Card, CardActionArea, CardContent, CardMedia, Typography } from "@material-ui/core";
-import { Link } from "react-router-dom";
+import { withStyles } from "@mui/styles";
+import { Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const CardMediaImageCover = withStyles( {
@@ -12,7 +12,7 @@ const CardMediaImageCover = withStyles( {
 
 function PortfolioCard( props ) {
 	return (
-		<Link style={ { textDecoration: "none" } } to={ props.path }>
+		<RouterLink style={ { textDecoration: "none" } } to={ props.path }>
 			<Card variant="outlined">
 				<CardActionArea disableTouchRipple>
 					{
@@ -28,7 +28,7 @@ function PortfolioCard( props ) {
 					</CardContent>
 				</CardActionArea>
 			</Card>
-		</Link>
+		</RouterLink>
 	);
 }
 

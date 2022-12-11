@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom-v5-compat";
 import BackButtonContext from "../contexts/back-button-context";
 import PortfolioContentPage from "./PortfolioContentPage";
 import InnerPage from "./InnerPage";
-import { Grid, Link, Typography } from "@material-ui/core";
+import { Grid, Link, Typography } from "@mui/material";
 import PortfolioCard from "./PortfolioCard";
 import PropTypes from "prop-types";
 
@@ -49,7 +49,7 @@ const portfolioContent = [
 			`,
 			<>
 				There is also a web version available&nbsp;
-				<Link color="secondary" href="https://progcalc.bmak.xyz/" target="_blank">here</Link>
+				<Link color="secondary" href="https://progcalc.bmak.xyz/">here</Link>
 				; however, due to the use of BigInt, it may not work in older browsers or browsers that do not support the use of BigInt.
 			</>
 		]
@@ -339,7 +339,7 @@ function Portfolio( props ) {
 				element={
 					<InnerPage title="🤖 Portfolio">
 						<Typography align="center" style={ { paddingBottom: "40px" } } variant="h4">
-						My résumé can be found <Link color="secondary" href="/resume.pdf" target="_blank">here</Link>.
+						My résumé can be found <Link color="secondary" href="/resume.pdf">here</Link>.
 						</Typography>
 
 						<Grid container justifyContent="center" spacing={ 2 }>

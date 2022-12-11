@@ -1,9 +1,9 @@
 import React from "react";
 import "./PortfolioContentPage.css";
-import { withStyles } from "@material-ui/core/styles";
+import withStyles from "@mui/styles/withStyles";
 import InnerPage from "./InnerPage";
-import { Button, Typography } from "@material-ui/core";
-import { GitHub as GitHubIcon } from "@material-ui/icons";
+import { Button, Typography } from "@mui/material";
+import { GitHub as GitHubIcon } from "@mui/icons-material";
 import ImageGallery from "react-image-gallery";
 import PropTypes from "prop-types";
 

@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "./NavBar";
-import { Typography } from "@material-ui/core";
+import { Typography } from "@mui/material";
 import PropTypes from "prop-types";
 
 function InnerPage( props ) {

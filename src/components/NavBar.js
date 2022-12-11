@@ -1,7 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
-import { Avatar, Button, Grid, Typography } from "@material-ui/core";
-import { Link } from "react-router-dom";
+import { Avatar, Button, Grid, Typography } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
 import pfpImage from "../media/pfp.png";
 import BackButtonContext from "../contexts/back-button-context";
 
@@ -15,8 +15,8 @@ function NavBar( ) {
 					<Typography style={ { alignItems: "center", display: "flex", fontSize: "24px", height: 75 } }>
 						{
 							backButtonContext ?
-								<Button color="secondary" component={ Link } style={ { fontSize: "20px" } } to={ backButtonContext }>&lt;- Back</Button> :
-								<Button color="secondary" component={ Link } style={ { fontSize: "20px" } } to="/">&lt;- Home</Button>
+								<Button color="secondary" component={ RouterLink } style={ { fontSize: "20px" } } to={ backButtonContext }>&lt;- Back</Button> :
+								<Button color="secondary" component={ RouterLink } style={ { fontSize: "20px" } } to="/">&lt;- Home</Button>
 						}
 					</Typography>
 				</div>

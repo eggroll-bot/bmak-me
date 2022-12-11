@@ -1,17 +1,17 @@
 import React from "react";
 import "./App.css";
-import { createTheme, MuiThemeProvider } from "@material-ui/core/styles";
+import { createTheme, ThemeProvider, StyledEngineProvider, adaptV4Theme } from "@mui/material/styles";
 import { createBrowserHistory } from "history";
 import { wrapHistory } from "oaf-react-router";
 import { Router, Route } from "react-router-dom";
 import { CompatRouter } from "react-router-dom-v5-compat";
-import { CssBaseline } from "@material-ui/core";
+import { CssBaseline } from "@mui/material";
 import FadeSwitch from "./components/FadeSwitch";
 import Home from "./components/Home";
 import AboutMe from "./components/AboutMe";
 import Portfolio from "./components/Portfolio";
 
-const theme = createTheme( {
+const theme = createTheme( adaptV4Theme( {
 	palette: {
 		background: {
 			default: "#1A1A1A",
@@ -24,6 +24,12 @@ const theme = createTheme( {
 			main: "#FF9B48"
 		},
 		type: "dark"
+	},
+	props: {
+		MuiLink: {
+			target: "_blank",
+			underline: "hover"
+		}
 	},
 	typography: {
 		fontFamily: "\"Raleway\", sans-serif"
@@ -51,7 +57,7 @@ const theme = createTheme( {
 			}
 		}
 	}
-} );
+} ) );
 
 const wrapSettings = {
 	restorePageStateOnPop: false
@@ -64,15 +70,17 @@ function App( ) {
 	return (
 		<Router history={ history }>
 			<CompatRouter>
-				<MuiThemeProvider theme={ theme }>
-					<CssBaseline />
+				<StyledEngineProvider injectFirst>
+					<ThemeProvider theme={ theme }>
+						<CssBaseline />
 
-					<FadeSwitch>
-						<Route component={ AboutMe } path="/about-me" />
-						<Route component={ Portfolio } path="/portfolio" />
-						<Route component={ Home } path="/" />
-					</FadeSwitch>
-				</MuiThemeProvider>
+						<FadeSwitch>
+							<Route component={ AboutMe } path="/about-me" />
+							<Route component={ Portfolio } path="/portfolio" />
+							<Route component={ Home } path="/" />
+						</FadeSwitch>
+					</ThemeProvider>
+				</StyledEngineProvider>
 			</CompatRouter>
 		</Router>
 	);

@@ -1,8 +1,8 @@
 import React from "react";
 import "./Home.css";
-import { Avatar, Box, Button, Grid, Link, Typography } from "@material-ui/core";
+import { Avatar, Box, Button, Grid, Link, Typography } from "@mui/material";
 import pfpImage from "../media/pfp.png";
-import { Code as CodeIcon, GitHub as GitHubIcon, Info as InfoIcon, LinkedIn as LinkedInIcon } from "@material-ui/icons";
+import { Code as CodeIcon, GitHub as GitHubIcon, Info as InfoIcon, LinkedIn as LinkedInIcon } from "@mui/icons-material";
 import { Link as RouterLink } from "react-router-dom";
 
 const gitHubLink = "https://github.com/eggroll-bot";
@@ -25,13 +25,13 @@ function Home( ) {
 				<Typography gutterBottom align="center" variant="h4">
 					Here is my&nbsp;
 
-					<Link href={ gitHubLink } rel="noopener noreferrer" style={ { color: "#FF845B" } } target="_blank">
+					<Link href={ gitHubLink } rel="noopener noreferrer" style={ { color: "#FF845B" } }>
 						<GitHubIcon /> GitHub
 					</Link>
 
 					&nbsp;and&nbsp;
 
-					<Link color="secondary" href={ linkedInLink } rel="noopener noreferrer" target="_blank">
+					<Link color="secondary" href={ linkedInLink } rel="noopener noreferrer">
 						<LinkedInIcon /> LinkedIn
 					</Link>
 
