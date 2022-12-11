@@ -39,7 +39,7 @@ function PortfolioContentPage( props ) {
 			{
 				props.github &&
 					<div style={ { paddingBottom: "40px", textAlign: "center" } }>
-						<Button color="primary" href={ props.github } rel="noopener noreferrer" size="medium" startIcon={ <GitHubIcon /> } target="_blank" variant="outlined">
+						<Button href={ props.github } rel="noopener noreferrer" startIcon={ <GitHubIcon /> } target="_blank" variant="outlined">
 							Visit GitHub Repository
 						</Button>
 					</div>

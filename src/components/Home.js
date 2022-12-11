@@ -42,7 +42,7 @@ function Home( ) {
 			<Grid container justifyContent="center" spacing={ 5 }>
 				<Grid item>
 					<RouterLink style={ { textDecoration: "none" } } to="/about-me">
-						<Button color="primary" size="medium" startIcon={ <InfoIcon /> } variant="outlined">
+						<Button startIcon={ <InfoIcon /> } variant="outlined">
 							About Me
 						</Button>
 					</RouterLink>
@@ -50,7 +50,7 @@ function Home( ) {
 
 				<Grid item>
 					<RouterLink style={ { textDecoration: "none" } } to="/portfolio">
-						<Button color="primary" size="medium" startIcon={ <CodeIcon /> } variant="outlined">
+						<Button startIcon={ <CodeIcon /> } variant="outlined">
 							Portfolio
 						</Button>
 					</RouterLink>
