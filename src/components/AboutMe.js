@@ -26,8 +26,8 @@ function AboutMe( ) {
 		in my portfolio linked below.
 		`,
 		`
-		In the short term, before I get my bachelor's degree, I'm looking to land a software engineering internship. After I get my degree, I am
-		considering either finding work in the software engineering industry or pursuing a master's degree in computer science.
+		In the short term, before I get my bachelor's degree, I'm looking to land another software engineering internship. After I graduate, I am considering
+		either finding work in the software engineering industry or pursuing a master's degree in computer science.
 		`,
 		<>
 			Wanna see what I&apos;ve been up to recently? Feel free to check out my portfolio. My portfolio and résumé can be found&nbsp;
