@@ -69,8 +69,8 @@ const portfolioContent = [
 			`
 			This website is my first project created with React. When I started this project, I hadn't used JavaScript in about 4 years, so I had to
 			practically re-learn the language, in addition to learning React's features. Learning the basics of React wasn't that difficult because the
-			documentation for React is fairly detailed. I used the Material-UI library for the UI components in this website. Material-UI also has
-			detailed documentation, so that made it easy to learn.
+			documentation for React is fairly detailed. I used the MUI library for the UI components in this website. MUI also has detailed documentation,
+			so that made it easy to learn.
 			`,
 			`
 			Overall, I'm fairly happy with how this website turned out. I will definitely be creating more React projects down the line.
