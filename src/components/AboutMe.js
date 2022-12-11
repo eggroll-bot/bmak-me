@@ -1,21 +1,10 @@
 import React from "react";
-import makeStyles from "@mui/styles/makeStyles";
-import InnerPage from "./InnerPage";
-import { Link, Typography } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
-
-const useStyles = makeStyles( {
-	bodyText: {
-		fontSize: 22,
-		fontWeight: 400,
-		marginBottom: "24px",
-		textAlign: "justify"
-	}
-} );
+import { Link } from "@mui/material";
+import InnerPage from "./InnerPage";
+import TypographyBody from "./TypographyBody";
 
 function AboutMe( ) {
-	const classes = useStyles( );
-
 	const paragraphs = [
 		`
 		Hello! Welcome to my website. I'm Brian Mak. I'm a student at the University of California, Santa Cruz majoring in computer science and minoring
@@ -44,9 +33,9 @@ function AboutMe( ) {
 	return (
 		<InnerPage title="👋 About Me">
 			{ paragraphs.map( ( item, index ) => (
-				<Typography align="left" className={ classes.bodyText } key={ index }>
+				<TypographyBody align="left" key={ index }>
 					{ item }
-				</Typography>
+				</TypographyBody>
 			) ) }
 		</InnerPage>
 	);

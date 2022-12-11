@@ -1,14 +1,7 @@
 import React from "react";
-import { withStyles } from "@mui/styles";
 import { Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
 import PropTypes from "prop-types";
-
-const CardMediaImageCover = withStyles( {
-	img: {
-		objectFit: "cover"
-	}
-} )( CardMedia );
 
 function PortfolioCard( props ) {
 	return (
@@ -17,8 +10,14 @@ function PortfolioCard( props ) {
 				<CardActionArea disableTouchRipple>
 					{
 						props.cover ?
-							<CardMediaImageCover component="img" src={ props.image } style={ { height: props.height || "100%", width: props.width || "100%" } } /> :
-							<CardMedia component="img" src={ props.image } style={ { height: props.height || "100%", width: props.width || "100%" } } />
+							<CardMedia
+								component="img"
+								src={ props.image }
+								style={ { height: props.height || "100%", objectFit: "cover", width: props.width || "100%" } } /> :
+							<CardMedia
+								component="img"
+								src={ props.image }
+								style={ { height: props.height || "100%", width: props.width || "100%" } } />
 					}
 
 					<CardContent>

@@ -1,20 +1,11 @@
 import React from "react";
 import "./PortfolioContentPage.css";
-import withStyles from "@mui/styles/withStyles";
 import InnerPage from "./InnerPage";
-import { Button, Typography } from "@mui/material";
+import { Button } from "@mui/material";
 import { GitHub as GitHubIcon } from "@mui/icons-material";
 import ImageGallery from "react-image-gallery";
+import TypographyBody from "./TypographyBody";
 import PropTypes from "prop-types";
-
-const useStyles = ( ) => ( {
-	bodyText: {
-		fontSize: 22,
-		fontWeight: 400,
-		marginBottom: "24px",
-		textAlign: "justify"
-	}
-} );
 
 function PortfolioContentPage( props ) {
 	const media = props.media?.map( ( item ) => {
@@ -23,11 +14,9 @@ function PortfolioContentPage( props ) {
 		if ( extension === "mp4" ) {
 			return {
 				original: item,
-				renderItem: ( item ) => {
-					const PortfolioVideo = <video autoPlay loop muted playsInline src={ item.original } style={ { backgroundColor: "#262626", height: "450px", maxWidth: "100%" } } />;
-
-					return PortfolioVideo;
-				}
+				renderItem: ( item ) => (
+					<video autoPlay loop muted playsInline src={ item.original } style={ { backgroundColor: "#262626", height: "450px", maxWidth: "100%" } } />
+				)
 			};
 		} else {
 			return { original: item };
@@ -53,20 +42,19 @@ function PortfolioContentPage( props ) {
 			}
 
 			{ props.paragraphs.map( ( item, index ) => (
-				<Typography align="left" className={ props.classes.bodyText } key={ index }>
+				<TypographyBody align="left" key={ index }>
 					{ item }
-				</Typography>
+				</TypographyBody>
 			) ) }
 		</InnerPage>
 	);
 }
 
 PortfolioContentPage.propTypes = {
-	classes: PropTypes.object.isRequired,
 	github: PropTypes.string,
 	media: PropTypes.array,
 	paragraphs: PropTypes.array.isRequired,
 	title: PropTypes.string.isRequired
 };
 
-export default withStyles( useStyles, { withTheme: true } )( PortfolioContentPage );
+export default PortfolioContentPage;
