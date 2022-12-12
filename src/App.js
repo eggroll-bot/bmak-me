@@ -8,6 +8,7 @@ import { CssBaseline } from "@mui/material";
 import Home from "./components/Home";
 import AboutMe from "./components/AboutMe";
 import Portfolio from "./components/Portfolio";
+import PageNotFound from "./components/PageNotFound";
 
 const theme = createTheme( {
 	palette: {
@@ -81,6 +82,7 @@ function App( ) {
 						<Route index element={ <Home /> } />
 						<Route element={ <AboutMe /> } path="about-me" />
 						<Route element={ <Portfolio /> } path="portfolio/*" />
+						<Route element={ <PageNotFound /> } path='*' />
 					</Routes>
 				</ThemeProvider>
 			</StyledEngineProvider>
