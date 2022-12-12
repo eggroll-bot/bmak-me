@@ -61,7 +61,7 @@ const portfolioContent = [
 		cover: true,
 		gallery: false,
 		url: "bmak-xyz",
-		github: "https://github.com/eggroll-bot/personal-website",
+		github: "https://github.com/eggroll-bot/bmak-xyz",
 		paragraphs: [
 			`
 			Project start date: June 2021
