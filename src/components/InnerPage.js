@@ -4,7 +4,7 @@ import { Typography } from "@mui/material";
 import PropTypes from "prop-types";
 
 function InnerPage( props ) {
-	document.title = props.title;
+	document.title = props.title + " | Brian Mak";
 
 	return (
 		<div style={ { margin: "auto", maxWidth: "1200px" } }>

@@ -9,7 +9,7 @@ const gitHubLink = "https://github.com/eggroll-bot";
 const linkedInLink = "https://www.linkedin.com/in/brian-mak/";
 
 function Home( ) {
-	document.title = "🏠 Home";
+	document.title = "🏠 Home | Brian Mak";
 
 	return (
 		<div className="Home">
