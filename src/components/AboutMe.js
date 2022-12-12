@@ -31,7 +31,7 @@ function AboutMe( ) {
 	];
 
 	return (
-		<InnerPage title="👋 About Me">
+		<InnerPage description="An about me page." title="👋 About Me">
 			{ paragraphs.map( ( item, index ) => (
 				<TypographyBody align="left" key={ index }>
 					{ item }

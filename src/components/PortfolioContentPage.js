@@ -24,7 +24,7 @@ function PortfolioContentPage( props ) {
 	} );
 
 	return (
-		<InnerPage title={ props.title }>
+		<InnerPage description={ props.paragraphs[1] } title={ props.title }>
 			{
 				props.github &&
 					<div style={ { paddingBottom: "40px", textAlign: "center" } }>

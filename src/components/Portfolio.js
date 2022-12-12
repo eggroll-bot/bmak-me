@@ -326,7 +326,7 @@ function Portfolio( ) {
 			<Route
 				index
 				element={
-					<InnerPage title="🤖 Portfolio">
+					<InnerPage description="A portfolio of previous work." title="🤖 Portfolio">
 						<Typography align="center" style={ { paddingBottom: "40px" } } variant="h4">
 						My résumé can be found <Link color="secondary" href="/resume.pdf">here</Link>.
 						</Typography>
