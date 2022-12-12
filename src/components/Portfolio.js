@@ -1,10 +1,11 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import BackButtonContext from "../contexts/back-button-context";
-import PortfolioContentPage from "./PortfolioContentPage";
 import InnerPage from "./InnerPage";
 import { Grid, Link, Typography } from "@mui/material";
 import PortfolioCard from "./PortfolioCard";
+import BackButtonContext from "../contexts/back-button-context";
+import PortfolioContentPage from "./PortfolioContentPage";
+import PageNotFound from "./PageNotFound";
 
 /*
 
@@ -351,6 +352,8 @@ function Portfolio( ) {
 					key={ index }
 					path={ item.url } />
 			) ) }
+
+			<Route element={ <PageNotFound /> } path='*' />
 		</Routes>
 	);
 }
