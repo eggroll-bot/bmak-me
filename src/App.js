@@ -3,10 +3,8 @@ import "./App.css";
 import { createTheme, ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
 import { createBrowserHistory } from "history";
 import { wrapHistory } from "oaf-react-router";
-import { Router, Route } from "react-router-dom";
-import { CompatRouter } from "react-router-dom-v5-compat";
+import { unstable_HistoryRouter as HistoryRouter, Routes, Route } from "react-router-dom";
 import { CssBaseline } from "@mui/material";
-import FadeSwitch from "./components/FadeSwitch";
 import Home from "./components/Home";
 import AboutMe from "./components/AboutMe";
 import Portfolio from "./components/Portfolio";
@@ -74,21 +72,19 @@ function App( ) {
 	wrapHistory( history, wrapSettings );
 
 	return (
-		<Router history={ history }>
-			<CompatRouter>
-				<StyledEngineProvider injectFirst>
-					<ThemeProvider theme={ theme }>
-						<CssBaseline />
+		<HistoryRouter history={ history }>
+			<StyledEngineProvider injectFirst>
+				<ThemeProvider theme={ theme }>
+					<CssBaseline />
 
-						<FadeSwitch>
-							<Route component={ AboutMe } path="/about-me" />
-							<Route component={ Portfolio } path="/portfolio" />
-							<Route component={ Home } path="/" />
-						</FadeSwitch>
-					</ThemeProvider>
-				</StyledEngineProvider>
-			</CompatRouter>
-		</Router>
+					<Routes>
+						<Route index element={ <Home /> } />
+						<Route element={ <AboutMe /> } path="about-me" />
+						<Route element={ <Portfolio /> } path="portfolio/*" />
+					</Routes>
+				</ThemeProvider>
+			</StyledEngineProvider>
+		</HistoryRouter>
 	);
 }
 

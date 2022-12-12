@@ -1,5 +1,4 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
 import { Avatar, Button, Grid, Typography } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
 import pfpImage from "../media/pfp.png";
@@ -31,4 +30,4 @@ function NavBar( ) {
 	);
 }
 
-export default withRouter( NavBar );
+export default NavBar;

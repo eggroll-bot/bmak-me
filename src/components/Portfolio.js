@@ -1,11 +1,10 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom-v5-compat";
+import { Routes, Route } from "react-router-dom";
 import BackButtonContext from "../contexts/back-button-context";
 import PortfolioContentPage from "./PortfolioContentPage";
 import InnerPage from "./InnerPage";
 import { Grid, Link, Typography } from "@mui/material";
 import PortfolioCard from "./PortfolioCard";
-import PropTypes from "prop-types";
 
 /*
 
@@ -321,21 +320,11 @@ context.keys( ).forEach( ( filePath ) => {
 	portfolioMedia[ mediaDirectoryName ][ mediaFileName ] = context( filePath );
 } );
 
-function Portfolio( props ) {
+function Portfolio( ) {
 	return (
 		<Routes>
-			{ portfolioContent.map( ( item, index ) => (
-				<Route
-					element={
-						<BackButtonContext.Provider value={ props.match.url }>
-							<PortfolioContentPage github={ item.github } media={ item.gallery ? Object.values( portfolioMedia[ item.media ] ) : null } paragraphs={ item.paragraphs } title={ item.name } />
-						</BackButtonContext.Provider>
-					}
-					key={ index }
-					path={ props.match.url + "/" + item.url } />
-			) ) }
-
 			<Route
+				index
 				element={
 					<InnerPage title="🤖 Portfolio">
 						<Typography align="center" style={ { paddingBottom: "40px" } } variant="h4">
@@ -345,19 +334,25 @@ function Portfolio( props ) {
 						<Grid container justifyContent="center" spacing={ 2 }>
 							{ portfolioContent.map( ( item, index ) => (
 								<Grid item key={ index } style={ { width: 512 } }>
-									<PortfolioCard cover={ item.cover } height="288px" image={ portfolioMedia[ item.media ][ item.image ] } path={ props.match.url + "/" + item.url } text={ item.name } />
+									<PortfolioCard cover={ item.cover } height="288px" image={ portfolioMedia[ item.media ][ item.image ] } path={ item.url } text={ item.name } />
 								</Grid>
 							) ) }
 						</Grid>
 					</InnerPage>
-				}
-				path={ props.match.url } />
+				} />
+
+			{ portfolioContent.map( ( item, index ) => (
+				<Route
+					element={
+						<BackButtonContext.Provider value={ "/portfolio" }>
+							<PortfolioContentPage github={ item.github } media={ item.gallery ? Object.values( portfolioMedia[ item.media ] ) : null } paragraphs={ item.paragraphs } title={ item.name } />
+						</BackButtonContext.Provider>
+					}
+					key={ index }
+					path={ item.url } />
+			) ) }
 		</Routes>
 	);
 }
-
-Portfolio.propTypes = {
-	match: PropTypes.object.isRequired
-};
 
 export default Portfolio;
