@@ -63,16 +63,19 @@ const theme = createTheme( {
 	}
 } );
 
-const wrapSettings = {
-	restorePageStateOnPop: false
-};
-
 const router = createBrowserRouter( [
 	{ path: "/", element: <Home /> },
 	{ path: "/about-me", element: <AboutMe /> },
 	{ path: "/portfolio/*", element: <Portfolio /> },
 	{ path: "*", element: <PageNotFound /> }
 ] );
+
+const wrapSettings = {
+	documentTitle: ( ) => "bmak.xyz",
+	setPageTitle: false,
+	announcePageNavigation: false,
+	restorePageStateOnPop: false
+};
 
 wrapRouter( router, wrapSettings );
 
