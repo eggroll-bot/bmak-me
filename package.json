@@ -23,8 +23,8 @@
     "react-scripts": "5.0.1"
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0",
-    "yarn-audit-fix": "^9.3.7"
+    "gh-pages": "^5.0.0",
+    "yarn-audit-fix": "^9.3.9"
   },
   "scripts": {
     "start": "react-scripts start",
