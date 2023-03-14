@@ -1,9 +1,8 @@
 import React from "react";
 import "./App.css";
 import { createTheme, ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
-import { createBrowserHistory } from "history";
-import { wrapHistory } from "oaf-react-router";
-import { unstable_HistoryRouter as HistoryRouter, Routes, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { wrapRouter } from "oaf-react-router";
 import { CssBaseline } from "@mui/material";
 import Home from "./components/Home";
 import AboutMe from "./components/AboutMe";
@@ -68,25 +67,23 @@ const wrapSettings = {
 	restorePageStateOnPop: false
 };
 
+const router = createBrowserRouter( [
+	{ path: "/", element: <Home /> },
+	{ path: "/about-me", element: <AboutMe /> },
+	{ path: "/portfolio/*", element: <Portfolio /> },
+	{ path: "*", element: <PageNotFound /> }
+] );
+
+wrapRouter( router, wrapSettings );
+
 function App( ) {
-	const history = createBrowserHistory( );
-	wrapHistory( history, wrapSettings );
-
 	return (
-		<HistoryRouter history={ history }>
-			<StyledEngineProvider injectFirst>
-				<ThemeProvider theme={ theme }>
-					<CssBaseline />
-
-					<Routes>
-						<Route index element={ <Home /> } />
-						<Route element={ <AboutMe /> } path="about-me" />
-						<Route element={ <Portfolio /> } path="portfolio/*" />
-						<Route element={ <PageNotFound /> } path='*' />
-					</Routes>
-				</ThemeProvider>
-			</StyledEngineProvider>
-		</HistoryRouter>
+		<StyledEngineProvider injectFirst>
+			<ThemeProvider theme={ theme }>
+				<CssBaseline />
+				<RouterProvider router={ router } />
+			</ThemeProvider>
+		</StyledEngineProvider>
 	);
 }
 
