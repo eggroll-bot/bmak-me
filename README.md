@@ -1,6 +1,6 @@
-# bmak-xyz
+# bmak-me
 
-This repository contains my [personal website](https://bmak.xyz/). The website currently has a homepage, about me page, and a portfolio page with several projects listed.
+This repository contains my [personal website](https://bmak.me/). The website currently has a homepage, about me page, and a portfolio page with several projects listed.
 
 ## Next steps
 

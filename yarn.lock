@@ -4824,9 +4824,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bmak-xyz@workspace:.":
+"bmak-me@workspace:.":
   version: 0.0.0-use.local
-  resolution: "bmak-xyz@workspace:."
+  resolution: "bmak-me@workspace:."
   dependencies:
     "@emotion/react": ^11.10.6
     "@emotion/styled": ^11.10.6

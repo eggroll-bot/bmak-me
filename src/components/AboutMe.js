@@ -25,7 +25,7 @@ function AboutMe( ) {
 		</>,
 		<>
 			If you want to reach out to me, feel free to contact me by email at&nbsp;
-			<Link color="secondary" href="mailto:brian@bmak.xyz">brian@bmak.xyz</Link>
+			<Link color="secondary" href="mailto:brian@bmak.me">brian@bmak.me</Link>
 			.
 		</>
 	];

@@ -1,11 +1,11 @@
 {
-  "name": "bmak-xyz",
+  "name": "bmak-me",
   "author": {
     "name": "Brian Mak",
-    "email": "brian@bmak.xyz",
-    "url": "https://bmak.xyz"
+    "email": "brian@bmak.me",
+    "url": "https://bmak.me"
   },
-  "homepage": "https://bmak.xyz",
+  "homepage": "https://bmak.me",
   "version": "1.0.0",
   "private": true,
   "dependencies": {

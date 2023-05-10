@@ -71,7 +71,7 @@ const router = createBrowserRouter( [
 ] );
 
 const wrapSettings = {
-	documentTitle: ( ) => "bmak.xyz",
+	documentTitle: ( ) => "bmak.me",
 	setPageTitle: false,
 	announcePageNavigation: false,
 	restorePageStateOnPop: false

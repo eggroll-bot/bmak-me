@@ -1,4 +1,4 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
-Sitemap: https://bmak.xyz/sitemap.txt
+Sitemap: https://bmak.me/sitemap.txt

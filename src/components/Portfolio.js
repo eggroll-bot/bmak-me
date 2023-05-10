@@ -49,19 +49,19 @@ const portfolioContent = [
 			`,
 			<>
 				There is also a web version available&nbsp;
-				<Link color="secondary" href="https://progcalc.bmak.xyz/">here</Link>
+				<Link color="secondary" href="https://progcalc.bmak.me/">here</Link>
 				; however, due to the use of BigInt, it may not work in older browsers or browsers that do not support the use of BigInt.
 			</>
 		]
 	},
 	{
-		name: "🌐 bmak.xyz",
-		media: "bmak_xyz",
+		name: "🌐 bmak.me",
+		media: "bmak_me",
 		image: "image1.jpg",
 		cover: true,
 		gallery: false,
-		url: "bmak-xyz",
-		github: "https://github.com/eggroll-bot/bmak-xyz",
+		url: "bmak-me",
+		github: "https://github.com/eggroll-bot/bmak-me",
 		paragraphs: [
 			`
 			Project start date: June 2021
