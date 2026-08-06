@@ -5,8 +5,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { wrapRouter } from "oaf-react-router";
 import { CssBaseline } from "@mui/material";
 import Home from "./components/Home";
-import AboutMe from "./components/AboutMe";
-import Portfolio from "./components/Portfolio";
 import PageNotFound from "./components/PageNotFound";
 
 const theme = createTheme( {
@@ -65,8 +63,6 @@ const theme = createTheme( {
 
 const router = createBrowserRouter( [
 	{ path: "/", element: <Home /> },
-	{ path: "/about-me", element: <AboutMe /> },
-	{ path: "/portfolio/*", element: <Portfolio /> },
 	{ path: "*", element: <PageNotFound /> }
 ] );
 

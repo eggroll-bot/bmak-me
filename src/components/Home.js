@@ -1,10 +1,9 @@
 import React from "react";
 import "./Home.css";
 import { Helmet } from "react-helmet";
-import { Avatar, Box, Button, Grid, Link, Typography } from "@mui/material";
+import { Avatar, Box, Link, Typography } from "@mui/material";
 import pfpImage from "../media/pfp.png";
 import { Code as CodeIcon, GitHub as GitHubIcon, Info as InfoIcon, LinkedIn as LinkedInIcon } from "@mui/icons-material";
-import { Link as RouterLink } from "react-router-dom";
 
 const gitHubLink = "https://github.com/eggroll-bot";
 const linkedInLink = "https://www.linkedin.com/in/brian-mak/";
@@ -42,24 +41,6 @@ function Home( ) {
 					.
 				</Typography>
 			</Box>
-
-			<Grid container justifyContent="center" spacing={ 5 }>
-				<Grid item>
-					<RouterLink style={ { textDecoration: "none" } } to="about-me">
-						<Button startIcon={ <InfoIcon /> } variant="outlined">
-							About Me
-						</Button>
-					</RouterLink>
-				</Grid>
-
-				<Grid item>
-					<RouterLink style={ { textDecoration: "none" } } to="portfolio">
-						<Button startIcon={ <CodeIcon /> } variant="outlined">
-							Portfolio
-						</Button>
-					</RouterLink>
-				</Grid>
-			</Grid>
 		</div>
 	);
 }
