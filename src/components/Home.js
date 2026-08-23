@@ -3,10 +3,11 @@ import "./Home.css";
 import { Helmet } from "react-helmet";
 import { Avatar, Box, Link, Typography } from "@mui/material";
 import pfpImage from "../media/pfp.png";
-import { Code as CodeIcon, GitHub as GitHubIcon, Info as InfoIcon, LinkedIn as LinkedInIcon } from "@mui/icons-material";
+import { Article as ArticleIcon, Construction as ConstructionIcon, GitHub as GitHubIcon, LinkedIn as LinkedInIcon } from "@mui/icons-material";
 
 const gitHubLink = "https://github.com/eggroll-bot";
 const linkedInLink = "https://www.linkedin.com/in/brian-mak/";
+const resumeLink = "/resume.pdf";
 
 function Home( ) {
 	return (
@@ -28,17 +29,33 @@ function Home( ) {
 				<Typography gutterBottom align="center" variant="h4">
 					Here is my&nbsp;
 
-					<Link href={ gitHubLink } rel="noopener noreferrer" style={ { color: "#FF845B" } }>
+					<Link color="secondary" href={ gitHubLink } rel="noopener noreferrer">
 						<GitHubIcon /> GitHub
 					</Link>
 
-					&nbsp;and&nbsp;
+					,&nbsp;
 
 					<Link color="secondary" href={ linkedInLink } rel="noopener noreferrer">
 						<LinkedInIcon /> LinkedIn
 					</Link>
 
+					, and&nbsp;
+
+					<Link color="secondary" href={ resumeLink } rel="noopener noreferrer">
+						<ArticleIcon /> Resume
+					</Link>
+
 					.
+				</Typography>
+			</Box>
+
+			<Box mb={ 3 }>
+				<Typography gutterBottom align="center" variant="h4">
+					<ConstructionIcon color="secondary" />
+					&nbsp;
+					This site is under construction.
+					&nbsp;
+					<ConstructionIcon color="secondary" />
 				</Typography>
 			</Box>
 		</div>
